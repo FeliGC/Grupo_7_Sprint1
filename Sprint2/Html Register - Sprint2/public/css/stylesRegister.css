@@ -1,0 +1,328 @@
+/* UNIVERSAL --------------------------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+}
+
+.imagenes {
+    width: 100%;
+}
+
+/* HEADER----------------------------------------------------------- */
+
+header {
+    background-color: darkmagenta;
+    margin: 5px;
+    padding: 5px;
+}
+
+.imagen-de-logo {
+    border-radius: 50px;
+    width: 100%;
+}
+
+.barra-de-busqueda {
+    width: 90%;
+    border: solid 2px #565555;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.boton-de-busqueda {
+    border: solid 2px #565555;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.barra-de-busqueda-con-lupa {
+    display: flex;
+    justify-content: center;
+}
+
+.secciones-de-la-web {
+    position: relative;
+}
+
+.secciones-de-la-web,
+.secciones,
+.secciones-de-usuario {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.secciones-de-usuario a,
+.secciones a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.secciones-de-usuario i,
+.secciones i {
+    color: #000000;
+}
+
+.secciones-de-usuario li,
+.secciones li {
+    margin: 0 5px;
+}
+
+.burger-menu {
+    display: flex;
+    justify-content: center;
+}
+
+#burger {
+    background-color: firebrick;
+    border: solid 1px #000000;
+    margin: 5px;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+/* MAIN----------------------------------------------------------- */
+
+.titulares {
+    font-size: 30px;
+    text-decoration: underline;
+    color: #000000;
+}
+
+h1.titulares {
+    text-align: center;
+}
+
+#estrellas-de-valoracion {
+    color: gold;
+}
+
+.carrito {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+}
+
+.mas,
+.menos {
+    width: 10%;
+}
+
+.cantidad-deseada {
+    text-align: center;
+    width: 70%;
+}
+
+.contador-del-producto {
+    display: none;
+}
+
+.precio {
+    color: greenyellow;
+    font-size: 20px;
+
+}
+
+.seccion-de-comentarios {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 15px;
+}
+
+.boton-de-carro {
+    width: 50%;
+    transition: 450ms;
+    border-radius: 5px;
+}
+
+.agregar-favorito {
+    padding: 5px;
+    margin: 5px;
+    transition: 450ms;
+    color: gray;
+}
+
+.clasificacion {
+    color: gray;
+    display: flex;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    justify-content: flex-end;
+}
+
+.required {
+    color:crimson
+}
+
+.boton-de-enviar {
+    width: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    transition: 450ms;
+}
+
+.producto-de-recomendacion {
+    margin: 10px;
+    text-decoration: none;
+}
+
+.valoraciones {
+    color: #000000;
+}
+
+
+/* REGISTER--------------------------------------------------------------*/
+
+.pagina-registro{
+    display: block;    
+    justify-content: center;
+}
+.formulario-registro{
+    display: block;
+    flex-direction: column;    
+    margin:15vw;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    background-color: #ebebeb;
+}
+input{
+    background-color: white;
+    color: #666;
+    border: 0;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px;
+}
+.campoCompletar{
+    width:60vw;
+}
+.campo-tildar{
+    margin:10px;
+    text-align: left;
+}
+label{
+    color:#666;
+}
+.boton{
+    text-align: center;   
+}
+button{
+    background-color: darkmagenta;
+    color: white;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+}
+.boton-login:hover{
+    background-color: rgb(70, 2, 70);
+}
+.titulosFormulario{
+    color: #666;
+    font-weight: bold;
+    padding-left: 13px;
+}
+
+
+
+/* FOOTER---------------------------------------------------------------- */
+
+footer {
+    color: #ffffff;
+    background-color: darkmagenta;
+}
+
+.redes-de-la-pagina {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 50px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+#icono-fb {
+    color: blue;
+}
+
+#icono-tw {
+    color: aqua;
+}
+
+#icono-ig {
+    color: #eb72b7;
+}
+
+/* PSEUDO-ELEMENTOS------------------------------------------------ */
+
+.boton-de-carro:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.mas:hover,
+.menos:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.agregar-favorito:hover{
+    color: rgb(243, 10, 10);
+}
+
+.producto-de-recomendacion:hover {
+    box-shadow: 0px 0px 10px rgb(76, 63, 63);
+}
+
+input[type="radio"]{ 
+    display:none;
+}
+
+.estrellas-de-valoracion:hover,
+.estrellas-de-valoracion:hover ~ .estrellas-de-valoracion {
+  color: gold;
+}
+
+input[type="radio"]:checked ~ .estrellas-de-valoracion {
+  color: gold;
+}
+
+.boton-de-enviar:hover {
+    background-color: blue;
+    color: white
+}
+
+#iconos-de-seccion:hover,
+.sitios:hover {
+    color: #630e27
+}
+
+/* MEDIA QUERIES------------------------------ */
+
+@media (min-width:0px) {
+    .secciones-de-la-web {
+        display: none;
+    }
+    .secciones-del-footer {
+        display: none;
+    }
+}
+@media (min-width: 361px) {
+    .secciones-de-la-web {
+        display: flex
+    }
+    .burger-menu {
+        display: none;
+    }
+    .secciones-del-footer {
+        display: block;
+    }
+}
