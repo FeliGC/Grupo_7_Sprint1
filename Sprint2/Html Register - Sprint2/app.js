@@ -4,9 +4,14 @@ const app = express();
 
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
+app.use('/images', express.static(__dirname + '/public/images'));
 
 app.get('/register', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/register.html'));
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/home.html'));
 });
 
 let puerto = process.env.PORT || 3000;
