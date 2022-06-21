@@ -23,4 +23,4 @@ Lo que pensamos: A pesar de que puede haber percanses es preferible avisar con a
 5)
 Dejar de hacer practicas que no son utiles o no agregan valor. Por lo tanto hemos decidido eliminarlas completamente.
 
-Lo que pensamos: No preguntar dudas es un tema que debemos de ubicar en la lista de dejar de hacer, los profesores son atentos y cordiales y siempre est�n predispuestos a ayudarnos
+Lo que pensamos: No preguntar dudas es un tema que debemos de ubicar en la lista de dejar de hacer, los profesores son atentos y cordiales y siempre estan predispuestos a ayudarnos
