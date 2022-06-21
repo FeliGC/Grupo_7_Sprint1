@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href= "static/css/Style.css" >
+        <script src="https://kit.fontawesome.com/706d8d482f.js" crossorigin="anonymous"></script>
+        <title>CARRITO DE COMPRAS</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img src="static/images/Logo_Vinoteca.png" class="imagen-de-logo">
+            </div>
+    
+            <div>
+                <form action="/" method="get" class="barra-de-busqueda-con-lupa">
+                    <input type="text" name="barra-de-busqueda" placeholder="Productos, Marcas , etc..." class="barra-de-busqueda">
+                    <button type="submit" class="boton-de-busqueda"><i class="fas fa-search" id="lupa"></i></button>
+                </form>
+            </div>
+    
+                <div class="secciones-de-la-web">
+                    <ul class="secciones">
+                        <li><a href="" class="sitios">Inicio<i class="fas fa-glass-martini-alt" id="iconos-de-seccion"></i></a></li>
+                        <li><a href="" class="sitios">Categorias<i class="fas fa-wine-bottle" id="iconos-de-seccion"></i></a></li>
+                        <li><a href="" class="sitios">Nosotros<i class="fas fa-users" id="iconos-de-seccion"></i></a></li>
+                        <li><a href="" class="sitios">Contacto <i class="fas fa-phone-alt" id="iconos-de-seccion"></i></a></li>
+                    </ul>
+                    <ul class="secciones-de-usuario">
+                        <li><a href="" class="sitios">Registrarse<i class="fas fa-user-plus" id="iconos-de-seccion"></i></a></li>
+                        <li><a href="" class="sitios">Iniciar Sesión<i class="fas fa-sign-in-alt" id="iconos-de-seccion"></i></a></li>
+                        <li><a href="" class="sitios">Carrito<i class="fas fa-cart-plus" id="iconos-de-seccion"></i></a></li>
+                    </ul>
+                </div>
+                <div class="burger-menu">
+                    <i class="fas fa-bars" id="burger"></i>
+                </div>
+        </header>
+        
+        <main>
+            <section class="Shop" >
+                  
+               
+                <table class="Shop-Container">  
+                    
+                    <thead>
+                        <tr>
+                            <th class="Remover"><u>&nbsp</u></th>
+                            <th class="Producto-Miniatura">&nbsp</th>
+                            <th class="Producto">Producto</th>
+                            <th class="Precio">Precio</th>
+                            <th class="Cantidad">Cantidad</th>
+                            <th class="Total">Total</th> 
+                        
+                        </tr>
+                     
+                        </thead>
+                       
+                        <tbody>
+                            <tr class="Cart-Items">  
+                                <td class="Remover"><u>X</u></td>
+                                <td class="Producto-Miniatura">
+                                <img src="static/images/el_esteco_blanc_de_blancs_2017.jpg" width="50"  alt="el_esteco_blanc_de_blancs_2017">
+                                </td>
+                                <td class="Producto">El Esteco Blanc de Blancs</td>
+                                <td class="Precio">
+                                    <div class="Monto">$1.600</div>
+                                </td>
+                                <td class="Cantidad">
+                                    <div class=”btn”>+</div>
+                                    <div class=”count”>1</div>
+                                    <div class=”btn”>-</div>
+                                    </td>
+                                <td class="Total">$1.600</td>
+                                   
+                                </tr>
+                                <tr class="Cart-Items"> 
+                                    <td class="Remover"><u>X</u></td>
+                                    <td class="Producto-Miniatura">
+                            <img src="static/images/sku_74552_-_costa_pampa_brut_rose_1000_x_1750.jpg" width="50" alt="sku_74552_-_costa_pampa_brut_rose_1000_x_1750">
+                        </td>
+                        <td class="Producto">Espumante Costa & Pampa Brut rosé</td>
+                        <td class="Precio">
+                            <div class="Monto">$1.560</div>
+                        </td>
+                        <td class="Cantidad">
+                            <div class=”btn”>+</div>
+                            <div class=”count”>1</div>
+                            <div class=”btn”>-</div>
+                            </td>
+                        <td class="Total">$1.560</td>
+                           
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6" class="actions">
+
+                            <div class="Cupon">
+            <label for="cupon_code">CUPÓN:</label> 
+            <input type="text" name="cupon_code" class="input-text form-control" id="cupon_code" value="" placeholder="CÓDIGO DE CUPON">
+            
+             <button type="submit" class="button" name="Aplicar-cupon" value="Aplicar cupón">APLICAR CUPÓN</button>
+                                    </div>
+                        
+                                    
+
+    
+    
+                    </tr>
+
+                                  </TBOdy>
+                            </table>  
+
+                       
+
+                <div class="checkout">
+                    <div class=”total”>
+                    <div>
+                    <div class="Total-Carrito">Total del Carrito</div>
+                   
+                    </div>
+                    <TAble class="Shop-table">
+                    <tr class="Sub-Total">
+                        <th> Subtotal</th> 
+                    <td class="Sub-Total-Monto">$3.160</td>
+                    </tr>
+                    <tr class="Envio">
+                        <th>Envío</th>
+                        <td class="Detalle-Envio">
+                            <ul>ENVÍO GRATUITO A CABA</ul> 
+                            <a class="Direccion">Cambiar Dirección</a>
+                </td>
+                </tr>
+                <tr class="Total">  
+                    
+                     <th> Total</th>
+                    <td class="Total-Monto">$3.160</td>
+                
+                </tr>
+                    
+                </TAble>
+                    <button class="button">FINALIZAR COMPRA</button>
+                    </div>
+            
+                   
+              </section>
+            
+    </main>
+    <footer class="footer">
+        <div class="logo">
+            <img src="static/images/Logo_Vinoteca.png" class="imagen-de-logo">
+        </div>
+        <div class="redes-de-la-pagina">
+            <a href=""><i class="fab fa-facebook" id="icono-fb"></i>
+            <a href=""><i class="fab fa-twitter" id="icono-tw"></i>
+            <a href=""><i class="fab fa-instagram" id="icono-ig"></i>
+        </div>
+             
+        </footer>
+    </body>
+</html>
