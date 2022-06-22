@@ -24,3 +24,12 @@ Lo que pensamos: A pesar de que puede haber percanses es preferible avisar con a
 Dejar de hacer practicas que no son utiles o no agregan valor. Por lo tanto hemos decidido eliminarlas completamente.
 
 Lo que pensamos: No preguntar dudas es un tema que debemos de ubicar en la lista de dejar de hacer, los profesores son atentos y cordiales y siempre est�n predispuestos a ayudarnos
+
+Qué hicimos bien?
+hicimos bien nuestro trabajo estando cada quien por su parte (refiriendonos al Sprint 1)
+
+Qué nos falto? 
+Nos falta mas comunicacion y tener mas decidido como hacer las cosas desde un principio.
+
+Qué mejorar?
+Comunicación y organizarnos mejor. Tener mas en claro la idea para comenzar.
