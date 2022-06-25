@@ -84,6 +84,8 @@ position: relative;
     font-family: 'roboto';
     font-weight: 500 italic;
     font-size: 24px;
+    text-align: center;
+    color: #ebebeb;
 }
 .precio{
     font-family: 'roboto';
