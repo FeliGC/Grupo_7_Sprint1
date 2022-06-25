@@ -17,7 +17,7 @@ header{
     font-family: 'roboto';
     font-weight: 600;
     font-size: smaller;
-    background-color:#663399;
+    background-color:#b22222;
     padding-top: 15px;
 }
 .titular{
@@ -72,8 +72,8 @@ position: relative;
     padding: 5px;
     width: 30px;
     height: 30px;
-    border: 1px solid #663399;
-    color: #663399;
+    border: 1px solid #b22222;
+    color: #b22222;
     background-color: #FFF;
     border-radius: 50%;
     position: absolute;
@@ -97,7 +97,7 @@ position: relative;
     font-family: 'roboto';
     font-weight: 400;
     font-size: 16px;
-    color:#663399;
+    color:#b22222;
     padding-top: 5px;
 }
 .desc{
@@ -177,7 +177,7 @@ flex-wrap: wrap;
 width: 30%;
 }
 .imgfoot:hover{
-    color: #663399;
+    color: #b22222;
 }
 
 }
