@@ -23,7 +23,13 @@ Lo que pensamos: A pesar de que puede haber percanses es preferible avisar con a
 5)
 Dejar de hacer practicas que no son utiles o no agregan valor. Por lo tanto hemos decidido eliminarlas completamente.
 
+<<<<<<< HEAD
 Lo que pensamos: No preguntar dudas es un tema que debemos de ubicar en la lista de dejar de hacer, los profesores son atentos y cordiales y siempre est�n predispuestos a ayudarnos
+=======
+Lo que pensamos: No preguntar dudas es un tema que debemos de ubicar en la lista de dejar de hacer, los profesores son atentos y cordiales y siempre estan predispuestos a ayudarnos
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+>>>>>>> 7d82305542b28e78d7e9bff1c619eab54b87b958
 
 Qué hicimos bien?
 hicimos bien nuestro trabajo estando cada quien por su parte (refiriendonos al Sprint 1)
