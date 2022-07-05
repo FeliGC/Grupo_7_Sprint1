@@ -1,0 +1,427 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebebeb;
+    box-sizing: border-box;
+    font-family: "Lato", Sans-serif;
+    min-height: 100%;
+   
+}
+.Shop{
+    width: 100%;
+    background-color:aliceblue ;
+    padding: 30px 30px;
+}
+
+.Shop-Container{
+    border: 1px solid #e5e5e5;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+.thead,
+tbody{
+    vertical-align: middle;
+    display: table-header-group;
+    
+    border-color: inherit;
+}
+.Shop-Container th{
+    color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-bottom: 1px solid #e5e5e5;
+    font-family: "Lato", Sans-serif;
+}
+
+th {
+    text-align: left;
+}
+
+.Shop-Container tr{
+
+    display: table-row;
+    vertical-align: inherit;
+    border-color: 1px solid  rgba(195, 194, 194, 0.84);
+    
+}
+
+.shop-Container td{
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: "Lato", Sans-serif;
+
+}
+
+/*tbody tr{
+    border-color: 1px solid  rgba(195, 194, 194, 0.84);
+}
+
+tr Cart-Items{
+    border-color: 1px solid  rgba(195, 194, 194, 0.84);
+}*/
+
+.Remover{
+    
+    
+    text-align: center;
+  
+    color: #D17238;
+    font-family: "Lato", Sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.9em;
+    
+}
+
+td.Producto-Miniatura{
+    text-align: center;
+    
+}
+
+td.Producto{
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*text-align: center;*/
+}
+
+td.Precio{
+    font-family: Oswald !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 150%;
+    text-align: center;
+}
+
+td.Cantidad{
+  vertical-align: middle;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 35px;
+    padding-bottom: 5px;
+    text-align: center;
+   
+    /*width: 100%;
+    text-align: center;
+    /*padding-left: 5px;
+    padding-right: 5px;*/
+   /*background-color: #d17238;*/
+   /*background: #e5e5e5;*/
+   justify-content: center;
+   align-items: center;
+   letter-spacing: 8px;
+   vertical-align: auto;
+    
+    /*color: #fff;*/
+    font-size: 18px;
+    /*height: 51px;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+
+
+}
+
+td.Total{
+    font-family: Oswald !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 150%;
+    text-align: center;
+}
+
+td.actions{
+    vertical-align: top;
+    padding: 30px 30px;
+    border:  1px solid  rgba(195, 194, 194, 0.84);
+}
+
+.Cupon{
+
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-grow: initial;
+}
+
+
+
+.Cupon label[for="cupon_code"]{
+    min-width: 130px;
+    background: #e9e9e9;
+    text-align: center;
+    margin-bottom: 0;
+    justify-content: center;
+    line-height: 52px;
+    color: #000000;
+    font-family: "Lato", Sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+
+}
+
+.Cupon input{
+
+
+font-family: "Lato", Sans-serif;
+font-size: 12px;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #000000;
+background-color: #FFFFFF;
+border-style: solid;
+border-width: 1px 1px 1px 1px;
+border-color: #E9E9E9;
+border-radius: 0px 0px 0px 0px;
+padding: 20px 30px 20px 30px;
+width: 54.5%;
+
+
+
+
+}
+
+.cuponbutton{
+    font-family: "Lato", Sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: 15px 40px 15px 40px;
+    min-width: 230px;
+}
+
+.checkout{
+    /*font-size: 5px;*/
+    border: 1px solid  rgba(195, 194, 194, 0.84);
+    /*padding: 0;
+    border-top: 0px;;*/
+    text-align: left;
+    padding: 30px 30px;
+   }
+
+.Total-Carrito{
+    color: #000000;
+    font-family: 'Oswald', Sans-serif;
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 1.3em;
+   }
+
+.Shop-table{
+    margin: 50px 0 45px 0;
+    color: #000;
+    table-layout: fixed;
+    width: 100%;
+    
+
+  
+
+    }
+
+.shop-table th,
+.shop-table tr {
+
+    padding-right: 30px;
+    width: 30%;
+    vertical-align: top;
+}
+
+.shop-table td {
+    border: 0;
+    padding: 0 0 15px 0;
+}
+
+
+
+.Sub-Total{
+    padding-right: 30px;
+    width: 30%;
+    vertical-align: top;
+   }
+
+.Sub-Total-Monto,
+.Total-Monto {
+    font-family: Oswald !important;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 150%;
+}
+
+.Shop-table p{
+    margin: 15px 0 0 0;
+}
+
+.Direccion{
+    color: #D17238;
+    font-family: "Lato", Sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.9em;
+}
+
+  .button{
+    color: #D17238;
+    font-family: 'Lato', Sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.9em;
+    background-color: #000;
+    border-color: #000;
+    padding: 18px 45px;
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+  
+/*----------------
+footer----------*/
+
+
+
+
+---------------------------
+/*header*/
+
+
+header {
+    background-color: darkmagenta;
+    margin: 5px;
+    padding: 5px;
+}
+
+.imagen-de-logo {
+    border-radius: 50px;
+    width: 100%;
+}
+
+.barra-de-busqueda {
+    width: 90%;
+    border: solid 2px #565555;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.boton-de-busqueda {
+    border: solid 2px #565555;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.barra-de-busqueda-con-lupa {
+    display: flex;
+    justify-content: center;
+}
+
+.secciones-de-la-web {
+    position: relative;
+}
+
+.secciones-de-la-web,
+.secciones,
+.secciones-de-usuario {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.secciones-de-usuario a,
+.secciones a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.secciones-de-usuario i,
+.secciones i {
+    color: #000000;
+}
+
+.secciones-de-usuario li,
+.secciones li {
+    margin: 0 5px;
+}
+
+
+/*@media (max-width: 361px)
+{
+
+.shop{
+    display: block;
+    text-align: center;
+}
+
+.Shop-Container 
+{
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+display: block;
+
+.Remover{width: auto;
+padding: 0 0 15px 0;  }
+
+.Shop-Container tr
+{
+    display: block;
+    text-align: center;
+}
+
+.Shop-Container td
+{
+padding: 15px 30px
+}
+.thead
+{
+    display: none;
+}
+    td.Producto-Miniatura{
+        display: none;
+    }
+
+    td.actions{
+
+    vertical-align: top;
+    padding: 30px 30px;
+     }
+     .Cupon{
+     flex-flow: column;
+    }
+     
+
+
+
+   .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    }
+}
+
