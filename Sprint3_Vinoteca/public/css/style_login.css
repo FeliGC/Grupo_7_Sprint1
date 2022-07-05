@@ -1,0 +1,187 @@
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://s1.1zoom.me/big0/607/Wine_Black_background_Bottle_Stemware_512316_1280x923.jpg);
+    font-family:"Source Sans Pro" ;
+    
+}
+
+.section-micuenta{
+    background-color: aliceblue;
+    padding-bottom: 5px;
+    min-width: 249px;
+    
+}
+
+
+.section-micuenta div{
+    
+    color: black;
+    text-align: center;
+}
+
+.micuenta{
+    
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    border-radius: 1px;
+    font-style: italic;
+    
+    
+}
+
+.acceder-icono{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    padding-right: 10px;
+}
+.subtitulo{
+    display: flex;
+    padding-bottom: 10px;
+    
+}
+
+.subtitulo h2{
+    text-decoration: underline;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.formu-login{
+    padding: 5px 20px;
+    width: 80%;
+    margin: auto;
+    
+    
+}
+
+.formu-login label{
+    display: block;
+    padding: 15px 0px;
+    width: 105%;
+    color: white;
+    font-size: 17px;
+}
+
+.formu-login input{
+    padding: 5px;
+    border: solid 2px white;
+    border-radius: 2px;
+    width: 80%;
+    background-color: white;
+}
+
+
+.escribir{
+    min-width: 140px;
+}
+
+.check{
+    min-width: 15px;
+}
+.checkbox-contraseña{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.checkbox-contraseña p{
+    width: 1200%;
+    
+}
+
+
+.div-boton{
+    padding-top: 10px;
+}
+
+.boton{
+    padding: 8px;
+    color: white;
+    border: solid 1px wheat;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 0);
+    font-size: 17px;
+    width: 40%;
+    min-width: 100px;
+    
+}
+
+
+.recuperar-contra{
+    padding-top: 20px;
+}
+
+
+a button{
+    color: white;
+    padding: 10px;
+    background-color: black;
+    border: 1px solid wheat;
+    width: 65%;
+    
+}
+
+h1{
+    text-align: center;
+    font-size: 35px;
+    font-style: italic;
+
+   
+}
+.texto-derecha{
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+    padding: 17px 40px;
+}
+
+@media (min-width:480px){
+    a button{
+        width: 50%;
+    }
+
+}
+
+
+ @media (min-width:769px){
+
+    .formu-login input{
+        width: 50%;
+    }
+    .boton{
+        transition: all 700ms;
+    }
+    .boton:hover{
+        background-color: white;
+        color: black;
+        border: solid 1px black;
+    }
+
+    a button{
+        width: 30%;
+        transition: all 700ms;
+    }
+    a button:hover{
+        background-color: white;
+        color: black;
+        border: solid 1px black;
+
+    }
+}
+
+
+    
+ 
+
+
+
