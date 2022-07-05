@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+<title>Document</title>
+<link rel="stylesheet" href="/css/Estilo.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/estilos_articulo.css">
+</head>
+<body>
+<header>
+    <div class="main-header-top-bar">
+
+<img class="logo" src="/images/Logo_Vinoteca.png"  alt="logo"> 
+
+<div class="navbar">
+    <input type="search" id="Buscar" placeholder="Encuentra tu vino favorito">
+      <i class="fas fa-search" ></i>
+   
+    </div>
+
+<div class="titular">El vino no solucionará tus problemas... pero bueno, ¡el agua tampoco!</div>
+
+</div>
+
+<div class="nav">
+    <br>
+    <p><a href="/">Inicio</a></p>
+    <p><a href="#">Categoria</a></p>
+    <p><a href="#">Contacto</a></p>
+    <p><a href="#">Nosotros</a></p>
+    <br>
+    <br>
+    <br>
+    <p><a href="/register">Registrate</a><i class="fas fa-user-circle"></i> </p>
+    <p><a href="/login">Inicia sesión</a><i class="fas fa-sign-in-alt"></i> </p>
+    <p><a href="/carrito">Mi carrito</a><i class="fas fa-shopping-bag"></i> </p>
+    <br>
+</div>
+<div class="burger-menu">
+    <i class="fas fa-bars" id="burguer" ></i>
+    
+</div>
+</header>
+    <main>
+        <div class="producto">
+            <div>
+                <img src="/images/Vino-Espumeante.jpg" class="imagenes">
+            </div>
+            <div class="detalles-del-producto">
+                <h2 class="titulares">Vino Espumeante</h2>
+                <p class="valoraciones">Valoracíon: <i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i></p>
+                <p class="precio">$8500</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Sed ea itaque minima commodi saepe odit rem minus possimus quaerat quia,
+                iure eum quam labore quod quas debitis, deserunt, atque sapiente.
+                Sed ea itaque minima commodi saepe odit rem minus possimus quaerat quia.</p>
+            </div>   s
+                <form action="/carrito" method="post" class="carrito">
+                    <div class="contador">
+                        <input type="button" value="-" class="menos">
+                        <label class="contador-del-producto" for="vino_de_ejemplo"> Cantidad de Vino de Ejemplo </label>
+                        <input type="number" id="vino-tinto" class="cantidad-deseada" step="1" min="1" max name="contador" value="1" title="cantidad" size="4" placeholder inputmode="numeric">
+                        <input type="button" value="+" class="mas">
+                    </div>
+                    <button type="submit" name="añadir-al-carrito" class="boton-de-carro">Añadir al Carrito<i class="fas fa-cart-plus" id="carro-de-compras"></i></button>
+                </form>
+                <div class="agregar-favorito">
+                    <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
+                </div>
+                <div>
+                    <h2>Categorias:</h2>
+                    <p>Lorem, ipsum dolor, sit amet consectetur, adipisicing elit</p>
+                </div>
+        </div>
+        <form class="seccion-de-comentarios">
+            <h1 class="titulares">Comentarios</h1>
+            <p>Tu valoracion:</p>
+            <p class="clasificacion">
+                <input id="radio1" type="radio" name="estrellas" value="5">
+                <label for="radio1" class="estrellas-de-valoracion"><i class="fas fa-star"></i></label>
+                <input id="radio2" type="radio" name="estrellas" value="4">
+                <label for="radio2" class="estrellas-de-valoracion"><i class="fas fa-star"></i></label>
+                <input id="radio3" type="radio" name="estrellas" value="3">
+                <label for="radio3" class="estrellas-de-valoracion"><i class="fas fa-star"></i></label>
+                <input id="radio4" type="radio" name="estrellas" value="2">
+                <label for="radio4" class="estrellas-de-valoracion"><i class="fas fa-star"></i></label>
+                <input id="radio5" type="radio" name="estrellas" value="1">
+                <label for="radio5" class="estrellas-de-valoracion"><i class="fas fa-star"></i></label>
+              </p>
+            <label for="tu-comentario">Tu comentario<span class="required">*</span></label>
+            <textarea id="comentario" maxlength="500">
+            </textarea>
+            <label for="comentar">Nombre<span class="required">*</span></label>
+            <input type="text" id="comentar" minlength="3" required placeholder="Pepito123">
+            <label for="email-para-comentar">Correo Electrónico<span class="required">*</span></label>
+            <input type="email" id="email-para-comentar" required placeholder="algo123@mail.com">
+            <input type="submit" name="submit" id="submit" class="boton-de-enviar" value="Enviar">
+        </form>
+        <div>
+            <h1 class="titulares">Productos Relacionados</h1>
+            <a href="/vino-blanco" class="producto-de-recomendacion">
+            <div>
+                <img src="/images/Vino-Blanco.jpg" class="imagenes">
+            </div>
+            <div class="detalle-del-producto-relacionado">
+                <h2 class="titulares">Vino Blanco</h2>
+                <p class="valoraciones">Valoracíon: <i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i></p>
+                <p class="precio">$1770</p>
+                <div class="agregar-favorito">
+                    <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
+                </div>
+                <button type="submit" name="añadir-al-carrito" class="boton-de-carro">Añadir al Carrito<i class="fas fa-cart-plus" id="carro-de-compras"></i></button>
+            </div>
+            </a>
+            <a href="/vino-rosado" class="producto-de-recomendacion">
+                <div>
+                    <img src="/images/Vino-Rosado.jpg" class="imagenes">
+                </div>
+            <div class="detalle-del-producto-relacionado">
+                <h2 class="titulares">Vino Rosado</h2>
+                <p class="valoraciones">Valoracíon: <i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i></p>
+                <p class="precio">$1250</p>
+                <div class="agregar-favorito">
+                    <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
+                </div>
+                <button type="submit" name="añadir-al-carrito" class="boton-de-carro">Añadir al Carrito<i class="fas fa-cart-plus" id="carro-de-compras"></i></button>
+            </div>
+            </a>
+            <a href="/vino-tinto" class="producto-de-recomendacion">
+                <div>
+                    <img src="/images/Vino-Tinto.jpg" class="imagenes">
+                </div>
+            <div class="detalle-del-producto-relacionado">
+                <h2 class="titulares">Vino Tinto</h2>
+                <p class="valoraciones">Valoracíon: <i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i></p>
+                <p class="precio">$1700</p>
+                <div class="agregar-favorito">
+                    <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
+                </div>
+                <button type="submit" name="añadir-al-carrito" class="boton-de-carro">Añadir al Carrito<i class="fas fa-cart-plus" id="carro-de-compras"></i></button>
+            </div>
+            </a>
+        </div>
+        
+    </main>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <br>
+        <br>
+        <br>
+        <div class="footsize" >
+        <div class="imgfoot"><i class="fab fa-bitcoin"></i></div>
+        <br>
+        <b>Pagá con tarjeta o en efectivo</b>
+        <br>
+        <p>Con Vinoteca paga hasta con cripto, </p>
+            <p> (No aplica durante recesiones ni con Dodgecoin) </p>
+             <p> ¡Y siempre es seguro!</p>
+        </div>
+        <br>
+        <div class="footsize" >
+        <div class="imgfoot"><i class="fas fa-gift"></i></div>
+        <br>
+        <b>Envío gratis</b>
+        <br>
+        <p>Solo por comprar con nosotros</p>
+            <p>¡tienes envíos gratis en cualquier vino!</p>
+            <p>No evites el exeso <i class="fas fa-smile-wink"></i>.</p>
+       </div>
+         <br>
+         <div class="footsize" >
+         <div class="imgfoot"><i class="fas fa-heart"></i></div>
+<br>
+         <b>Eres lo más importante</b>
+         <br>
+         <p>¿Problemas con el producto? ¡Contactanos! Con Vinoteca</p>
+             <p>no hay nada de que preocuparte, porque estás </p>
+                 <p> siempre acompañado</p>
+            </div>
+ <br>
+ <br>
+ <br>
+                 <b class="vino"><b>Copyright © 2022-2022 Vinoteca Equipo7 ProAdvanceForever 7.7.7</b></b>
+                 <br>
+                 <br>
+    </footer>
+</body>
+</html>

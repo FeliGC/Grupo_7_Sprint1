@@ -1,22 +1,28 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mainRoutes = require ('./routers/mainRoutes');
-const productsRoutes = require ('./routers/productsRoutes');
-const usersRoutes = require ('./routers/usersRoutes');
 
 app.use(express.static('public'));
+
 /*
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath) );
 */
 
+const mainRoutes = require ('./routers/mainRoutes');
 app.use('/', mainRoutes);
+
+const productsRoutes = require ('./routers/productsRoutes');
 app.use('/products', productsRoutes);
+
+const usersRoutes = require ('./routers/usersRoutes');
 app.use('/users', usersRoutes);
 
-/*
 
+
+
+
+/*
 app.get('/vino-tinto', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/vino-tinto.html'));
 });
