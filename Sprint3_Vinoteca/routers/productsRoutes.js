@@ -6,13 +6,13 @@ const productsController = require('../controllers/productsController')
 router.get('/', productsController.mostrarProductos );
 
 /* Detalle de productos */
-router.get('/:id', productsController.detalleProducto);
+router.get('/detalle/:productoId', productsController.detalleProducto);
 
 /* Crear producto */
-router.get('/crearProducto', productsController.crearProducto );
+router.get('/crear-producto', productsController.crearProducto );
 
 /* editar producto */
-router.get('/editarProducto', productsController.editarProducto );
+router.get('/editar-producto/:productoId', productsController.editarProducto );
 
 /* Carrito productos */
 router.get('/carrito', productsController.carritoProductos );

@@ -10,9 +10,13 @@ body {
 }
 
 .imagenes{
-width: 90%;
+   width: 90%;
    margin: auto;
    border-radius: 15px;
+}
+
+.caja-de-imagenes {
+    display: flex;
 }
 
 /* MAIN----------------------------------------------------------- */
@@ -25,10 +29,14 @@ main{
 .titulares {
     font-size: 30px;
     text-decoration: underline;
-    color: #000000;
+    color: #ffffff;
 }
 
 h1.titulares {
+    text-align: center;
+}
+
+.detalle-del-producto-relacionado {
     text-align: center;
 }
 
@@ -59,7 +67,8 @@ h1.titulares {
 .precio {
     color: greenyellow;
     font-size: 20px;
-
+    margin: -5px;
+    padding: 5px;
 }
 
 .seccion-de-comentarios {
@@ -76,10 +85,22 @@ h1.titulares {
 }
 
 .agregar-favorito {
-    padding: 5px;
-    margin: 5px;
+    padding: 5px 10px 10px 10px;
+    margin: -5px;
     transition: 450ms;
     color: gray;
+}
+
+.titulo-valoracion {
+    color: #ffffff;
+}
+
+.descripcion-en-detalle {
+    color: #ffffff;
+}
+
+.categoria-en-detalle {
+    color: #ffffff;
 }
 
 .clasificacion {
@@ -109,7 +130,8 @@ h1.titulares {
 }
 
 .valoraciones {
-    color: #000000;
+    color: #ffffff;
+    padding: 5px;
 }
 
 /* FOOTER---------------------------------------------------------------- */

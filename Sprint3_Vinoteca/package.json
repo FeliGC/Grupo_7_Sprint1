@@ -1,7 +1,7 @@
 {
-  "name": "vinoteca-DH",
+  "name": "vinotecadh",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://trello.com/b/3YDnXREy/grupo-7-vinoteca",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -13,5 +13,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
