@@ -9,7 +9,14 @@ router.get('/', productsController.mostrarProductos );
 router.get('/:id', productsController.detalleProducto);
 
 /* Crear producto */
-router.get('/', productsController.crearProducto );
+router.get('/crearProducto', productsController.crearProducto );
+
+/* editar producto */
+router.get('/editarProducto', productsController.editarProducto );
+
+/* Carrito productos */
+router.get('/carrito', productsController.carritoProductos );
+
 
 
 module.exports = router
