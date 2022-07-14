@@ -1,0 +1,34 @@
+ [
+    {
+        "id": 1,
+        "img": "Vino-Tinto.jpg",
+        "nombre": "Vino Tinto",
+        "precio": "$ARS 1700",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea itaque minima commodi saepe odit rem minus possimus quaerat quia, iure eum quam labore quod quas debitis, deserunt, atque sapiente.Sed ea itaque minima commodi saepe odit rem minus possimus quaerat quia.",
+        "categoria": "Crianza, Tinto, Semiseco"
+    },
+    {
+        "id": 2,
+        "img": "Vino-Blanco.jpg",
+        "nombre": "Vino Blanco",
+        "precio": "$ARS 1770",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea itaque minima commodi saepe odit rem minus possimus quaerat quia, iure eum quam labore quod quas debitis, deserunt, atque sapiente.Sed ea itaque minima commodi saepe odit rem minus possimus quaerat quia.",
+        "categoria": "Reserva, Blanco, Abocado"
+    },
+    {
+        "id": 3,
+        "img": "Vino-Rosado.jpg",
+        "nombre": "Vino Rosado",
+        "precio": "$ARS 1250",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea itaque minima commodi saepe odit rem minus possimus quaerat quia, iure eum quam labore quod quas debitis, deserunt, atque sapiente.Sed ea itaque minima commodi saepe odit rem minus possimus quaerat quia.",
+        "categoria": "Joven, Rosado, Muy Dulce"
+    },
+    {
+        "id": 4,
+        "img": "Vino-Espumeante.jpg",
+        "nombre": "Vino Espumoso",
+        "precio": "$ARS 8500",
+        "descripcion": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea itaque minima commodi saepe odit rem minus possimus quaerat quia, iure eum quam labore quod quas debitis, deserunt, atque sapiente.Sed ea itaque minima commodi saepe odit rem minus possimus quaerat quia.",
+        "categoria": "Gran Reseva, Espumoso, Dulce"
+    }
+]

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/css/style_login.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/registro.css">
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <section>
+        <div class="section-micuenta">
+           <h1 class="micuenta">MI CUENTA</h1>
+           <div><i style="padding-right: 2px;" class="fas fa-home"></i>Inicio    /    Mi Cuenta</div>
+        </div> 
+        <br>
+        <br>
+        <br>
+        
+
+
+        <div class="formu-login">
+
+            <div class="subtitulo">
+            
+            <i class="fas fa-sign-in-alt acceder-icono"></i><h2>ACCEDER</h2> 
+    
+            </div>
+
+
+
+
+            
+
+
+          <form action="/" method="GET">
+            <label>Nombre de usuario o correo electronico:</label>
+            <input type="text" name="correoUsuario" class="escribir" required minlength="3" maxlength="30">
+
+            <label>Contraseña:</label>
+            <input type="password" name="contraseña" class="escribir" required minlength="4" maxlength="30">
+
+            <div class="checkbox-contraseña">
+                <input type="checkbox" name="recordarcontraseña" class="check"> <p style="font-size: 17px;color: rgb(255, 255, 255);">¿Recordar Contraseña?</p>
+
+                
+            </div>
+
+            <div class="div-boton">
+                <button type="submit" class="boton">ENTRAR</button>
+    
+            </div>
+
+            <div class="recuperar-contra">
+
+                <a style="color: rgb(255, 255, 255);" href="#">¿Olvidaste tu contraseña?</a>
+    
+            </div>
+          </form>
+          
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        </div>
+
+        <div class="texto-derecha">
+
+            <h1>Registrarse</h1>
+            <br>
+
+            <p>Registrarse en este sitio le permite acceder al estado e historial de sus pedidos.
+             Simplemente complete los campos a continuación y obtendremos una nueva cuenta configurada para usted en poco tiempo.
+             Solo le pediremos la información necesaria para que el proceso de compra sea rápido y fácil.
+            </p>
+            <br>
+
+            <a href="/register"><button>REGISTRARSE</button></a>
+
+        </div>
+    </section>
+
+    <%- include('partials/footer.ejs') %>
+
+
+</body>
+</html>
