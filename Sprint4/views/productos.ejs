@@ -7,14 +7,14 @@
             <h1 class="titulares">Lista De Productos</h1>
             
             <% for(let productos of listaDeProductos) { %>
-                <a href="/vino-tinto" class="producto-de-recomendacion">
+                <a href="/products/detail/<%= productos.id %>" class="producto-de-recomendacion">
                     <div class="caja-de-imagenes">
                         <img src="/images/<%= productos.img %>" class="imagenes">
                     </div>
                 <div class="detalle-del-producto-relacionado">
-                    <h2 class="titulares"><%= productos.nombre %></h2>
+                    <h2 class="titulares"><%= productos.name %></h2>
                     <p class="valoraciones">Valoracíon: <i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i></p>
-                    <p class="precio"><%= productos.precio %></p>
+                    <p class="precio">$ARS <%= productos.price %></p>
                     <div class="agregar-favorito">
                         <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
                     </div>
