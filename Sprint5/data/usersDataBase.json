@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "firstName": "Rodrigo",
+        "lastName": "Ramirez",
+        "email": "example@gmail",
+        "birthday": "YYYY/MM/DD",
+        "location": "calle123",
+        "password": "xxxxxx",
+        "confirmPassword": "xxxxxx",
+        "img": "img"
+    }
+]

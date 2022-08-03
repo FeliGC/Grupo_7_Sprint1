@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/css/Estilo.css">
+<link rel="stylesheet" href="/css/crecion-y-edicion">
+<link rel="stylesheet" href="/estilos_articulo.css">
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+
+    <h2 class="titulo-de-cracion">Edición de Productos</h2>
+    <form action="/productos/editar-producto/<%=listadoDeProductos.id%>?_method=PUT"
+     method="POST" enctype="multipart/form-data">
+     
+        <div class="creacion-de-productos">
+            <label for="name" class="seccion-de-creacion">Nombre:</label>
+            <input type="text" name="name" id="name" class="input-de-creacion">
+            <label for="description" class="seccion-de-creacion">Descripción:</label>
+            <input type="text" name="description" id="description" class="input-de-creacion">
+            <label for="image" class="seccion-de-creacion">Imagen del Producto:</label>
+            <input type="file" name="image" id="image" class="seccion-de-creacion">
+            <label for="category" class="titulo-de-categoria">Categoria:</label>
+            <div class="bloque-de-categorias">
+                <label>Tinto</label>
+                <input type="checkbox" name="category" id="category" value="Tinto" class="input-categorias">
+                <label>Blanco</label>
+                <input type="checkbox" name="category" id="category" value="Blanco" class="input-categorias">
+                <label>Rosado</label>
+                <input type="checkbox" name="category" id="category" value="Rosado" class="input-categorias">
+                <label>Espumoso</label>
+                <input type="checkbox" name="category" id="category" value="Espumoso" class="input-categorias">
+            </div>
+            <label for="price" class="seccion-de-creacion">Precio:</label>
+            <input type="number" name="price" id="price" max="100.000" class="input-de-creacion">
+            <button type="submit" class="boton-de-creacion">Editar</button>
+        </div>
+    </form>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
