@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href= "/css/EstilosCarro.css">
+<link rel="stylesheet" href="/css/registro.css">
+    <%- include('partials/head.ejs') %>
+    <body>
+        <%- include('partials/header.ejs') %>
+        <main>
+            <section class="Shop" >
+                  
+               
+                <table class="Shop-Container">  
+                    
+                    <thead>
+                        <tr>
+                            <th class="Remover"><u>&nbsp</u></th>
+                            <th class="Producto-Miniatura">&nbsp</th>
+                            <th class="Producto">Producto</th>
+                            <th class="Precio">Precio</th>
+                            <th class="Cantidad">Cantidad</th>
+                            <th class="Total">Total</th> 
+                        
+                        </tr>
+                     
+                        </thead>
+                       
+                        <tbody>
+                            <tr class="Cart-Items">  
+                                <td class="Remover"><u>X</u></td>
+                                <td class="Producto-Miniatura">
+                                <img src="/images/el_esteco_blanc_de_blancs_2017.jpg" width="50"  alt="el_esteco_blanc_de_blancs_2017">
+                                </td>
+                                <td class="Producto">El Esteco Blanc de Blancs</td>
+                                <td class="Precio">
+                                    <div class="Monto">$1.600</div>
+                                </td>
+                                <td class="Cantidad">
+                                    <div class=”btn”>+</div>
+                                    <div class=”count”>1</div>
+                                    <div class=”btn”>-</div>
+                                    </td>
+                                <td class="Total">$1.600</td>
+                                   
+                                </tr>
+                                <tr class="Cart-Items"> 
+                                    <td class="Remover"><u>X</u></td>
+                                    <td class="Producto-Miniatura">
+                            <img src="/images/sku_74552_-_costa_pampa_brut_rose_1000_x_1750.jpg" width="50" alt="sku_74552_-_costa_pampa_brut_rose_1000_x_1750">
+                        </td>
+                        <td class="Producto">Espumante Costa & Pampa Brut rosé</td>
+                        <td class="Precio">
+                            <div class="Monto">$1.560</div>
+                        </td>
+                        <td class="Cantidad">
+                            <div class=”btn”>+</div>
+                            <div class=”count”>1</div>
+                            <div class=”btn”>-</div>
+                            </td>
+                        <td class="Total">$1.560</td>
+                           
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6" class="actions">
+
+                            <div class="Cupon">
+            <label for="cupon_code">CUPÓN:</label> 
+            <input type="text" name="cupon_code" class="input-text form-control" id="cupon_code" value="" placeholder="CÓDIGO DE CUPON">
+            
+             <button type="submit" class="button" name="Aplicar-cupon" value="Aplicar cupón">APLICAR CUPÓN</button>
+                                    </div>
+                        
+                                    
+
+    
+    
+                    </tr>
+
+                                  </TBOdy>
+                            </table>  
+
+                       
+
+                <div class="checkout">
+                    <div class=”total”>
+                    <div>
+                    <div class="Total-Carrito">Total del Carrito</div>
+                   
+                    </div>
+                    <TAble class="Shop-table">
+                    <tr class="Sub-Total">
+                        <th> Subtotal</th> 
+                    <td class="Sub-Total-Monto">$3.160</td>
+                    </tr>
+                    <tr class="Envio">
+                        <th>Envío</th>
+                        <td class="Detalle-Envio">
+                            <ul>ENVÍO GRATUITO A CABA</ul> 
+                            <a class="Direccion">Cambiar Dirección</a>
+                </td>
+                </tr>
+                <tr class="Total">  
+                    
+                     <th> Total</th>
+                    <td class="Total-Monto">$3.160</td>
+                
+                </tr>
+                    
+                </TAble>
+                    <button class="button">FINALIZAR COMPRA</button>
+                    </div>
+            
+                   
+              </section>
+            
+    </main>
+    <br>
+    <br>
+    <br>
+    
+    <%- include('partials/footer.ejs') %>
+    </body>
+</html>

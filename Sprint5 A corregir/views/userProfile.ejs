@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/css/style_login.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/registro.css">
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <section>
+        <div class="section-micuenta">
+           <h1 class="micuenta">MI CUENTA</h1>
+           <div><i style="padding-right: 2px;" class="fas fa-home"></i>Inicio    /    Mi Cuenta</div>
+        </div> 
+
+        <img src= "images/usersAvatars/<% locals.userLogged.userAvatar %>" width="20" style="border-radius: 100;">
+            Hola <%= user.firstName %>
+        <br>
+
+        <div class="alert-user" <%= user.email %>>
+            
+         </div>
+        <br>
+        <br>
+        
+
+
+         
+
+        
+          
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        </div>
+
+        <div class="texto-derecha">
+
+            <h1>Registrarse</h1>
+            <br>
+
+            <p>Registrarse en este sitio le permite acceder al estado e historial de sus pedidos.
+             Simplemente complete los campos a continuación y obtendremos una nueva cuenta configurada para usted en poco tiempo.
+             Solo le pediremos la información necesaria para que el proceso de compra sea rápido y fácil.
+            </p>
+            <br>
+
+            <a href="/register"><button>REGISTRARSE</button></a>
+
+        </div>
+    </section>
+
+    <%- include('partials/footer.ejs') %>
+
+
+</body>
+</html>
