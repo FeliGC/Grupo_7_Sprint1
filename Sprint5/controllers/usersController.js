@@ -4,22 +4,24 @@ const User = require('../models/usersModels');
 
 const usersController = {
     register: (req, res) => {
+        // res.cookie("hhhhh", "hhgg"), { maxage: 1000*30});
         res.render('register')
     },
     processRegister: (req, res) => {
+        
         let validation = validationResult(req);
 
-        if(!validation.isEmpty()) {
+        if (!validation.isEmpty()) {
             return res.render('register', {
                 errors: validation.mapped(),
                 oldData: req.body
             });
         }
-        
+
         let userInDB = User.findByField('email', req.body.email);
 
-        if(userInDB) {
-            return res.render('register', { 
+        if (userInDB) {
+            return res.render('register', {
                 errors: {
                     email: {
                         msg: 'Este email ya esta registrado'
@@ -35,12 +37,61 @@ const usersController = {
             img: req.file.filename
         }
 
-        User.create(userToCreate);
-        res.redirect('/');
+        let userCreated = User.create(userToCreate);
+
+        return res.redirect('/users/login');
+
     },
     login: (req, res) => {
-        res.render('login')
+        return res.render('login');
     },
+
+    //** */
+
+    loginProcess: (req, res) => {
+        let userToLogin = User.findByField('email', req.body.email);
+
+        if (userToLogin) {
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if (isOkThePassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+
+                if (req.body.recordarcontraseña) {
+                    res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60 })
+                }
+                
+                return res.redirect("/users/profile");
+            }
+            
+            return res.render('login', {
+                errors: {
+                    password: {
+                        msg: 'Las credenciales son inválidas'
+                    }
+                }
+            });
+        }
+        
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'No se encuentra éste email en la base'
+                }
+            }
+        });
+    },
+    profile: (req, res) => {
+        return res.render('userProfile', {
+            user: req.session.userLogged
+        });
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    }
 
 };
 

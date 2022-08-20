@@ -1,5 +1,19 @@
 const express = require('express');
 const app = express();
+const session = require('express-session');
+const cookies = require('cookie-parser');
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
+app.use(session({
+    secret: 'secret word!',
+    resave: false,
+    saveUninitialized: false,
+  }));
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 app.use(express.urlencoded( {extended : false} ))
 app.use(express.json())

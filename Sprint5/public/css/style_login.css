@@ -121,6 +121,9 @@ body{
     padding-top: 20px;
 }
 
+.errors-form {
+    color: yellow;
+}
 
 a button{
     color: white;

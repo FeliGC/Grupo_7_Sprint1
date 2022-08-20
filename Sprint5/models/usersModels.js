@@ -35,7 +35,7 @@ const User = {
         }
         allUsers.push(newUser);
         fs.writeFileSync(this.filePath, JSON.stringify(allUsers, null, 4));
-        return true;
+        return newUser;
     },
     delete: function(id) {
         let allUsers = this.findAll();

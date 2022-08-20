@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+    <main>
+            <h1 class="titulares">Lista De Productos</h1>
+            
+            <% for(let productos of listaDeProductos) { %>
+                <a href="/vino-tinto" class="producto-de-recomendacion">
+                    <div class="caja-de-imagenes">
+                        <img src="/images/<%= productos.img %>" class="imagenes">
+                    </div>
+                <div class="detalle-del-producto-relacionado">
+                    <h2 class="titulares"><%= productos.nombre %></h2>
+                    <p class="valoraciones">Valoracíon: <i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i></p>
+                    <p class="precio"><%= productos.precio %></p>
+                    <div class="agregar-favorito">
+                        <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
+                    </div>
+                    <button type="submit" name="añadir-al-carrito" class="boton-de-carro">Añadir al Carrito<i class="fas fa-cart-plus" id="carro-de-compras"></i></button>
+                </div>
+                </a>
+            <% } %>
+    </main>
+    <br>
+    <br>
+    <br>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

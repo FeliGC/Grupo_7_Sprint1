@@ -4,13 +4,23 @@ const usersController = require('../controllers/usersController')
 
 const uploadFile = require('../middlewares/uploadFile');
 const registerValidation = require('../middlewares/registerValidation');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+
 
 /* Register */
-router.get('/register', usersController.register);
+router.get('/register', guestMiddleware, usersController.register);
 /* Procesar el registro */
 router.post('/register', uploadFile.single('userAvatar'), registerValidation, usersController.processRegister);
 
 /* Login */
-router.get('/login', usersController.login);
+router.get('/login', guestMiddleware, usersController.login);
+/*procesar Login */
+router.post('/login', usersController.loginProcess);
+
+/* Perfil */
+router.get('/profile', authMiddleware, usersController.profile);
+/*Logout*/
+router.get('/logout', usersController.logout);
 
 module.exports = router

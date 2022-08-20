@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/css/Estilo.css">
+    <link rel="stylesheet" href="/css/crecion-y-edicion">
+    <link rel="stylesheet" href="/estilos_articulo.css">
+<%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+    <main>
+        <div class="producto">
+            <div id="producto">
+                <img src="/images/<%= producto.img %>" class="imagenes">
+            </div>
+            <div class="detalles-del-producto">
+                <h2 class="titulares"><%= producto.nombre %></h2>
+                <p class="titulo-valoracion">Tu valoracion:</p>
+                <p class="clasificacion">
+                <input id="radio1" type="radio" name="estrellas" value="5">
+                <label for="radio1" class="estrellas-de-valoracion"><i class="fas fa-star"></i></label>
+                <input id="radio2" type="radio" name="estrellas" value="4">
+                <label for="radio2" class="estrellas-de-valoracion"><i class="fas fa-star"></i></label>
+                <input id="radio3" type="radio" name="estrellas" value="3">
+                <label for="radio3" class="estrellas-de-valoracion"><i class="fas fa-star"></i></label>
+                <input id="radio4" type="radio" name="estrellas" value="2">
+                <label for="radio4" class="estrellas-de-valoracion"><i class="fas fa-star"></i></label>
+                <input id="radio5" type="radio" name="estrellas" value="1">
+                <label for="radio5" class="estrellas-de-valoracion"><i class="fas fa-star"></i></label>
+                </p>
+                <p class="precio"><%= producto.precio %></p>
+                <p class="descripcion-en-detalle"><%= producto.descripcion %></p>
+            </div>
+                <form action="/carrito" method="post" class="carrito">
+                    <div class="contador">
+                        <input type="button" value="-" class="menos">
+                        <label class="contador-del-producto" for="vino_de_ejemplo"> Cantidad de Vino de Ejemplo </label>
+                        <input type="number" id="vino-tinto" class="cantidad-deseada" step="1" min="1" max name="contador" value="1" title="cantidad" size="4" placeholder inputmode="numeric">
+                        <input type="button" value="+" class="mas">
+                    </div>
+                    <button type="submit" name="añadir-al-carrito" class="boton-de-carro">Añadir al Carrito<i class="fas fa-cart-plus" id="carro-de-compras"></i></button>
+                </form>
+                <div class="agregar-favorito">
+                    <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
+                </div>
+                <div>
+                    <h2 class="categoria-en-detalle">Categorias:</h2>
+                    <p class="categoria-en-detalle"><%= producto.categoria %></p>
+                </div>
+        </div>
+        <form class="seccion-de-comentarios">
+            <h1 class="titulares">Comentarios</h1>
+            <label for="tu-comentario">Tu comentario<span class="required">*</span></label>
+            <textarea id="comentario" maxlength="500">
+            </textarea>
+            <label for="comentar">Nombre<span class="required">*</span></label>
+            <input type="text" id="comentar" minlength="3" required placeholder="Pepito123">
+            <label for="email-para-comentar">Correo Electrónico<span class="required">*</span></label>
+            <input type="email" id="email-para-comentar" required placeholder="algo123@mail.com">
+            <input type="submit" name="submit" id="submit" class="boton-de-enviar" value="Enviar">
+        </form>
+        <!-- <div>
+            <h1 class="titulares">Productos Relacionados</h1>
+            <a href="/vino-blanco" class="producto-de-recomendacion">
+            <div>
+                <img src="/images/Vino-Blanco.jpg" class="imagenes">
+            </div>
+            <div class="detalle-del-producto-relacionado">
+                <h2 class="titulares">Vino Blanco</h2>
+                <p class="valoraciones">Valoracíon: <i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i></p>
+                <p class="precio">$1770</p>
+                <div class="agregar-favorito">
+                    <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
+                </div>
+                <button type="submit" name="añadir-al-carrito" class="boton-de-carro">Añadir al Carrito<i class="fas fa-cart-plus" id="carro-de-compras"></i></button>
+            </div>
+            </a>
+            <a href="/vino-rosado" class="producto-de-recomendacion">
+                <div>
+                    <img src="/images/Vino-Rosado.jpg" class="imagenes">
+                </div>
+            <div class="detalle-del-producto-relacionado">
+                <h2 class="titulares">Vino Rosado</h2>
+                <p class="valoraciones">Valoracíon: <i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i></p>
+                <p class="precio">$1250</p>
+                <div class="agregar-favorito">
+                    <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
+                </div>
+                <button type="submit" name="añadir-al-carrito" class="boton-de-carro">Añadir al Carrito<i class="fas fa-cart-plus" id="carro-de-compras"></i></button>
+            </div>
+            </a>
+            <a href="/vino-espumoso" class="producto-de-recomendacion">
+                <div>
+                    <img src="/images/Vino-Espumeante.jpg" class="imagenes">
+                </div>
+            <div class="detalle-del-producto-relacionado">
+                <h2 class="titulares">Vino Espumeante</h2>
+                <p class="valoraciones">Valoracíon: <i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i></p>
+                <p class="precio">$8500</p>
+                <div class="agregar-favorito">
+                    <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
+                </div>
+                <button type="submit" name="añadir-al-carrito" class="boton-de-carro">Añadir al Carrito<i class="fas fa-cart-plus" id="carro-de-compras"></i></button>
+            </div>
+            </a>
+        </div>
+         -->
+    </main>
+    <br>
+    <br>
+    <br>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

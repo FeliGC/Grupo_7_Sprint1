@@ -1,13 +1,18 @@
 [
     {
         "id": 1,
-        "firstName": "Rodrigo",
-        "lastName": "Ramirez",
-        "email": "example@gmail",
-        "birthday": "YYYY/MM/DD",
-        "location": "calle123",
-        "password": "xxxxxx",
-        "confirmPassword": "xxxxxx",
-        "img": "img"
+        "firstName": "ROMINA",
+        "lastName": "GONZALEZ",
+        "email": "ijijij@hotmail.com",
+        "password": "$2a$10$5RVehwGVTwxkGNLzBpW4HezexgygU/2w5SNN36JDkV/fFXISBZx.q",
+        "img": "userAvatar-1660432565652.jpg"
+    },
+    {
+        "id": 2,
+        "firstName": "ezequiel",
+        "lastName": "GONZALEZ",
+        "email": "romin_s@hotmail.com",
+        "password": "$2a$10$HCDEOr1c.jg4gvgwHXVWaewtmeNfYoE.7dcf5.Bwv7y/wGWJGYVLK",
+        "img": "userAvatar-1659912277578.jpg"
     }
 ]
