@@ -1,0 +1,227 @@
+/* UNIVERSAL --------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+}
+
+.imagenes{
+   width: 90%;
+   margin: auto;
+   border-radius: 15px;
+}
+
+.caja-de-imagenes {
+    display: flex;
+}
+
+/* MAIN----------------------------------------------------------- */
+main{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    }
+
+.titulares {
+    font-size: 30px;
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+h1.titulares {
+    text-align: center;
+}
+
+.detalle-del-producto-relacionado {
+    text-align: center;
+}
+
+#estrellas-de-valoracion {
+    color: gold;
+}
+
+.carrito {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+}
+
+.mas,
+.menos {
+    width: 10%;
+}
+
+.cantidad-deseada {
+    text-align: center;
+    width: 70%;
+}
+
+.contador-del-producto {
+    display: none;
+}
+
+.precio {
+    color: greenyellow;
+    font-size: 20px;
+    margin: -5px;
+    padding: 5px;
+}
+
+.seccion-de-comentarios {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 15px;
+}
+
+.boton-de-carro {
+    width: 50%;
+    transition: 450ms;
+    border-radius: 5px;
+}
+
+.agregar-favorito {
+    padding: 5px 10px 10px 10px;
+    margin: -5px;
+    transition: 450ms;
+    color: gray;
+}
+
+.titulo-valoracion {
+    color: #ffffff;
+}
+
+.descripcion-en-detalle {
+    color: #ffffff;
+}
+
+.categoria-en-detalle {
+    color: #ffffff;
+}
+
+.clasificacion {
+    color: gray;
+    display: flex;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    justify-content: flex-end;
+}
+
+.required {
+    color:crimson
+}
+
+.boton-de-enviar {
+    width: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    transition: 450ms;
+}
+
+.producto-de-recomendacion {
+    margin: 10px;
+    text-decoration: none;
+}
+
+.valoraciones {
+    color: #ffffff;
+    padding: 5px;
+}
+
+/* FOOTER---------------------------------------------------------------- */
+
+footer {
+    color: #ffffff;
+    background-color: darkmagenta;
+}
+
+.redes-de-la-pagina {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 50px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+#icono-fb {
+    color: blue;
+}
+
+#icono-tw {
+    color: aqua;
+}
+
+#icono-ig {
+    color: #eb72b7;
+}
+
+/* PSEUDO-ELEMENTOS------------------------------------------------ */
+
+.boton-de-carro:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.mas:hover,
+.menos:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.agregar-favorito:hover{
+    color: rgb(243, 10, 10);
+}
+
+.producto-de-recomendacion:hover {
+    box-shadow: 0px 0px 10px rgb(76, 63, 63);
+}
+
+input[type="radio"]{ 
+    display:none;
+}
+
+.estrellas-de-valoracion:hover,
+.estrellas-de-valoracion:hover ~ .estrellas-de-valoracion {
+  color: gold;
+}
+
+input[type="radio"]:checked ~ .estrellas-de-valoracion {
+  color: gold;
+}
+
+.boton-de-enviar:hover {
+    background-color: blue;
+    color: white
+}
+
+#iconos-de-seccion:hover,
+.sitios:hover {
+    color: #630e27
+}
+
+/* MEDIA QUERIES------------------------------ */
+
+@media (min-width:0px) {
+    .secciones-de-la-web {
+        display: none;
+    }
+    .secciones-del-footer {
+        display: none;
+    }
+}
+@media (min-width: 361px) {
+    .secciones-de-la-web {
+        display: flex
+    }
+    .burger-menu {
+        display: none;
+    }
+    .secciones-del-footer {
+        display: block;
+    }
+}

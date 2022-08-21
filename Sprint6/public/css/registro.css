@@ -1,0 +1,29 @@
+main{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    border-radius: 16px black;
+    background-image: url(https://s1.1zoom.me/big0/607/Wine_Black_background_Bottle_Stemware_512316_1280x923.jpg);
+    width: 100%;
+    height: 100%;
+}
+.forma{
+    color: aliceblue;
+ background-color: aliceblue;
+border-radius: 15px;
+padding: 70px;
+font-family: 'roboto';
+font-weight: 400;
+font-size: 16px;
+margin: 40px;
+background-color: #b22222;
+}
+
+input{
+    padding: 5px;
+    border-radius: 7px;
+}
+footer{
+    position: relative;
+
+}
