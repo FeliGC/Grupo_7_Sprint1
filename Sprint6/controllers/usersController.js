@@ -1,10 +1,10 @@
-const { validationResult } = require('express-validator');
+const { validationResult, Result } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const User = require('../models/usersModels');
+const db = require('../src/database/models');
 
 const usersController = {
     register: (req, res) => {
-        // res.cookie("hhhhh", "hhgg"), { maxage: 1000*30});
         res.render('register')
     },
     processRegister: (req, res) => {
