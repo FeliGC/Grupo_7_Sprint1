@@ -13,6 +13,8 @@ router.get('/detail/:productoId', productsController.detalleProducto);
 
 /* Crear producto */
 router.get('/create-products', productsController.crearProducto);
+/*Guardar producto*/
+router.get('/create-products', productsController.guardado);
 
 var storage = multer.diskStorage({
 
