@@ -1,6 +1,6 @@
 window.addEventListener("load",function(){
     
-    let formulario = this.document.querySelector("form")
+    let formulario = document.querySelector("form")
 
     formulario.addEventListener("submit",function(e){
         
