@@ -25,9 +25,13 @@
 
                     </div>
 
+                    <div style="color: red;" class="errores">
+                        <ul></ul>
+                    </div>
+
                     <form method="post" action="/users/login">
                         <label>Nombre de usuario o correo electronico:</label>
-                        <input type="text" name="email" class="escribir" required minlength="3" maxlength="30">
+                        <input type="text" name="email" class="escribir name" required minlength="3" maxlength="30">
 
                         <% if(locals.errors && errors.email) { %>
                             <div class="errors-form">
@@ -37,7 +41,7 @@
                                 <br>
                                 <br>
                                 <label>Contraseña:</label>
-                                <input type="password" name="password" class="escribir" required minlength="4"
+                                <input type="password" name="password" class="escribir password" required minlength="4"
                                     maxlength="30">
                                 <% if(locals.errors && errors.password) { %>
                                     <div class="errors-form">
@@ -91,6 +95,7 @@
                     <a href="/register"><button>REGISTRARSE</button></a>
 
                 </div>
+                <script src="../js/login.js"></script>
             </section>
 
             <%- include('partials/footer.ejs') %>
