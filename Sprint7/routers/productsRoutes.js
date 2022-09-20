@@ -9,7 +9,7 @@ const multer = require('multer');
 router.get('/', productsController.mostrarProductos );
 
 /* Detalle de productos */
-router.get('/detail/:productoId', productsController.detalleProducto);
+router.get('/detail/:productoId', productsController.detalle);
 
 /* Crear producto */
 router.get('/create-products', productsController.crearProducto);
@@ -31,7 +31,7 @@ router.post('/create-products',upload.single("avatarUsuario") ,productsControlle
 
 
 /* editar producto */
-router.get('/edit-products/:productoId', productsController.editarProducto );
+router.get('/edit-products/:productoId', productsController.editar );
 router.put('/edit-products/:productoId', productsController.update);
 
 
