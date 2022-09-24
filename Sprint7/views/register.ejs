@@ -8,24 +8,42 @@
 
     <body>
         <%- include('partials/header.ejs') %>
-            <main>
+        <section>
+            <div class="section-micuenta">
+                <h1 class="micuenta">REGISTRO</h1>
+                <div><i style="padding-right: 2px;" class="fas fa-home"></i>Inicio / Mi Cuenta</div>
+            </div>    
+        
+        <main>
+                <div>
+
+                <div class="errores" style="color:white">
+                    <ul></ul>
+                </div>
+                
                 <form method="POST" action="/users/register" enctype="multipart/form-data">
+                    
                     <div class="forma">
+                        <div class="errores" style="color:white">
+                            <ul></ul>
+                        </div>
+
                         <label for="firstName">Nombre de usuario:</label>
                         <br>
-                        <input type="text" name="firstName" id="firstName" placeholder="Nombre de su persona"
+                        <input class="firstName" type="text" name="firstName" id="firstName" placeholder="Nombre de su persona"
                             value="<%= locals.oldData ? oldData.firstName : null %>">
-                        <% if(locals.errors && errors.firstName) { %>
-                            <div class="errors-form" >
-                                <%= errors.firstName.msg %>
-                            </div>
-                        <% } %>
+                            <% if(locals.errors && errors.firstName) { %>
+                                <div class="errors-form" >
+                                    <%= errors.firstName.msg %>
+                                </div>
+                            <% } %>
+                        
                         <br>
                         <br>
                         <br>
                         <label for="lastName">Apellido de usuario:</label>
                         <br>
-                        <input type="text" name="lastName" id="lastName" placeholder="Apellido de su persona"
+                        <input class="lastName" type="text" name="lastName" id="lastName" placeholder="Apellido de su persona"
                             value="<%= locals.oldData ? oldData.lastName : null %>">
                         <% if(locals.errors && errors.lastName) { %>
                             <div class="errors-form" >
@@ -37,7 +55,7 @@
                         <br>
                         <label for="email">Email del usuario:</label>
                         <br>
-                        <input type="text" name="email" id="email" placeholder="hola123@email.com"
+                        <input class="email" type="text" name="email" id="email" placeholder="hola123@email.com"
                             value="<%= locals.oldData ? oldData.email : null %>">
                         <% if(locals.errors && errors.email) { %>
                             <div class="errors-form" >
@@ -49,7 +67,7 @@
                         <br>
                         <label for="password">Crea una contraseña</label>
                         <br>
-                        <input type="password" name="password" id="password">
+                        <input class="password" type="password" name="password" id="password">
                         <% if(locals.errors && errors.password) { %>
                             <div class="errors-form" >
                                 <%= errors.password.msg %>
@@ -60,7 +78,7 @@
                         <br>
                         <label for="userAvatar">Agrega una foto de usuario:</label>
                         <br>
-                        <input type="file" name="userAvatar" multiple id="userAvatar">
+                        <input type="file" name="userAvatar" multiple id="userAvatar" class="userAvatar">
                         <br>
                         <br>
                         <br>
@@ -73,8 +91,12 @@
                         </form>
                     </div>
                 </form>
+            </div>
             </main>
+            </section>
             <%- include('partials/footer.ejs') %>
+
+            <script src="../public/js/register.js"></script>
     </body>
 
 </html>
