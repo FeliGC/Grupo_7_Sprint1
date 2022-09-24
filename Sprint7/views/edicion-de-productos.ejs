@@ -9,7 +9,7 @@
 
 
     <h2 class="titulo-de-cracion">Edición de Productos</h2>
-    <form action="/products/editar-producto"<%=listadoDeProductos.id%>?_method=PUT
+    <form action="/products/edit-products"<%=producto.id%>?_method=PUT
      method="POST" enctype="multipart/form-data">
      
         <div class="creacion-de-productos">
@@ -35,6 +35,10 @@
             <button type="submit" class="boton-de-creacion">Editar</button>
         </div>
     </form>
+
+</div>
+<script src="/js/Edit-Product.js"></script>
+
 
     <%- include('partials/footer.ejs') %>
 </body>
