@@ -22,13 +22,8 @@
                 </div>
                 
                 <form method="POST" action="/users/register" enctype="multipart/form-data">
-                    
-                    <div class="forma">
-                        <div class="errores" style="color:white">
-                            <ul></ul>
-                        </div>
-
-                        <label for="firstName">Nombre de usuario:</label>
+                                    
+                    <label for="firstName">Nombre de usuario:</label>
                         <br>
                         <input class="firstName" type="text" name="firstName" id="firstName" placeholder="Nombre de su persona"
                             value="<%= locals.oldData ? oldData.firstName : null %>">
