@@ -30,6 +30,10 @@ app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
 
+const apiProductsRouter = require('./routes/api/???');
+const apiUsersRouter = require('./routers/api/???');
+app.use('/api/products', apiProductsRouter);
+app.use('/api/users', apiUsersRouter);
 
 
 app.listen(process.env.PORT || 3000, () => {
