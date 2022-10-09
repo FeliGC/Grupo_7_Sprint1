@@ -24,10 +24,10 @@ DROP TABLE IF EXISTS `category`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `categorys` varchar(45) NOT NULL,
+  `name` varchar(45) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `categorys_UNIQUE` (`categorys`)
+  UNIQUE KEY `categorys_UNIQUE` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -59,7 +59,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `product_category_idx` (`category_id`),
   CONSTRAINT `category` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,7 +89,7 @@ CREATE TABLE `users` (
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `mail_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +98,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'ROMINA','GONZALEZ','ijijij@hotmail.com','$2a$10$5RVehwGVTwxkGNLzBpW4HezexgygU/2w5SNN36JDkV/fFXISBZx.q','userAvatar-1660432565652.jpg','2022-05-11 08:00:00'),(2,'ezequiel','GONZALEZ','romin_s@hotmail.com','$2a$10$HCDEOr1c.jg4gvgwHXVWaewtmeNfYoE.7dcf5.Bwv7y/wGWJGYVLK','userAvatar-1659912277578.jpg','2022-08-29 15:30:45');
+INSERT INTO `users` VALUES (1,'ROMINA','GONZALEZ','ijijij@hotmail.com','$2a$10$5RVehwGVTwxkGNLzBpW4HezexgygU/2w5SNN36JDkV/fFXISBZx.q','userAvatar-1660432565652.jpg','2022-05-11 08:00:00'),(2,'ezequiel','GONZALEZ','romin_s@hotmail.com','$2a$10$HCDEOr1c.jg4gvgwHXVWaewtmeNfYoE.7dcf5.Bwv7y/wGWJGYVLK','userAvatar-1659912277578.jpg','2022-08-29 15:30:45'),(3,'Joel','Castillo','joelwilliamcastillo@gmail.com','$2a$10$5CUJsgHGngLJ6Yim/XJOI.0j3jnvQz1vM3dStSYSnrJKO9JeanjJS','userAvatar-1665147164770.jpg','2022-10-07 17:58:17');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -111,4 +111,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-08-29 17:11:44
+-- Dump completed on 2022-10-09 18:23:07
