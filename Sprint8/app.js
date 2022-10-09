@@ -29,10 +29,10 @@ app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
 
-// const apiProductsRouter = require('./routers/api/???');
-// app.use('/api/products', apiProductsRouter);
-const apiUsersRouter = require('./routers/api/usersApiRouter');
-app.use('/api/users', apiUsersRouter);
+const productsApiRouter = require("./routers/api/productsApiRouter")
+const usersApiRouter = require('./routers/api/usersApiRouter');
+app.use('/api/users', usersApiRouter);
+app.use("/api/products", productsApiRouter)
 
 
 app.listen(process.env.PORT || 3000, () => {
