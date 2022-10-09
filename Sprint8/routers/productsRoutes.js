@@ -9,23 +9,21 @@ const uploadFile = require('../middlewares/products/uploadFile');
 router.get('/', productsController.mostrarProductos );
 
 /* Detalle de productos */
-router.get('/detail/:productoId', productsController.detalle);
+router.get('/detail/:id', productsController.detalle);
 
-/* Crear producto */
+/* Creación de productos */
 router.get('/create-products', createValidator, productsController.crearProducto);
-/*Guardar producto*/
 router.post('/create-products', uploadFile.single("productImage"), productsController.guardado);
 
-// router.post('/create-products',uploadFile.single("avatarUsuario"), productsController.store);
+/* Edición de productos */
+router.get('/edit-products/:id', productsController.editar );
+router.put('/edit-products/:id', uploadFile.single("productImage"), productsController.update);
 
-/* editar producto */
-router.get('/edit-products/:productoId', productsController.editar );
-router.put('/edit-products/:productoId', productsController.update);
+/* Carrito de productos */
+router.get('/carrito', productsController.carritoProductos );
 
-/* Carrito productos */
-router.get('/cart', productsController.carritoProductos );
-/* Agregar borrado */
-router.delete('/delete/:productoId', productsController.borrar);
+/* Eliminar producto */
+router.delete('/delete/:id', productsController.borrar);
 
 
 module.exports = router

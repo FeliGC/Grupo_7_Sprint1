@@ -1,8 +1,12 @@
+const db = require('../src/database/models');
+
 const mainController = {
     index: (req, res) => {
-        res.render('home')
+        db.Product.findAll()
+        .then(allProducts => {
+            res.render('home', {allProducts});
+        })
     }
-
 };
 
 

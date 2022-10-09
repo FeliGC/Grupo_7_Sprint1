@@ -1,29 +1,31 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('../src/database/models');
 const { validationResult } = require('express-validator');
 
-const productsFilePath = path.join(__dirname, '../data/productosDataBase.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-const db = require('../src/database/models');
-const Op = db.Sequelize.Op;
-
-
 const productsController = {
-
-    //1 ok
     mostrarProductos: (req, res) => {
         db.Product.findAll()
-            .then(products => {
-                res.render('productos', { listaDeProductos: productos })
+            .then(allProducts => {
+                res.render('productos', { allProducts })
             })
     },
+    detalle: (req, res) => {
+        let id = req.params.id;
 
-
-    //2
-
+        db.Product.findByPk(id, {
+            include: [{association: "category"}]
+        })
+        .then(product => {
+            res.render('detalle-de-los-productos', { product });
+        })
+    },
+    crearProducto: (req, res) => {
+        db.Category.findAll()
+            .then(allCategorys => {
+                res.render('creacion-de-productos', {allCategorys});
+            });
+    },
     guardado: (req, res) => {
-        let validation = validationResult(req);
+        const validation = validationResult(req);
 
         if (!validation.isEmpty()) {
             return res.render('creacion-de-productos', {
@@ -33,116 +35,70 @@ const productsController = {
         }
 
         db.Product.create({
-            nombre: req.body.name,
-            descripcion: req.body.description,
-            imagen: req.file.filename,
-            FKcategoria: req.body.category,
-            precio: req.body.price,
+            img: req.file.filename,
+            name: req.body.name,
+            description: req.body.description,
+            category_id: req.body.category_id,
+            price: req.body.price,
+        })
+        .then(() => {
+            return res.redirect('/products');
+        })
+    },
+    editar: (req, res) => {
+        let id = req.params.id;
+        let oneProduct = db.Product.findByPk(id, {include:[{association:"category"}] });
+        let categorys = db.Category.findAll();
+
+        Promise
+        .all([oneProduct, categorys])
+        .then(([Product, allCategorys]) => {
+            res.render('edicion-de-productos', {Product, allCategorys});
+        })
+        .catch(error => {
+            console.log(error);
         });
-        res.redirect('/products');
     },
+    update: (req, res) => {
+        let id = req.params.id;
 
-
-    /*Anterior
-    
-        detalleProducto: (req, res) => {
-            let id = req.params.productoId;
-    
-            let producto = productos.find((producto) => {
-                return producto.id == id;
-            });
-    
-            res.render('detalle-de-los-productos', { producto: producto });
-        },*/
-
-    //3
-
-    detalle: (req, res) => {
-        let producto = db.Product.findAll();
-        let productoEnDetalle = db.Product.findByPk(req.params.id);
-        Promise.all([producto, productoEnDetalle])
-            .then(([products, productoEncontrado]) => {
-                res.render('./products/detail', { productoEnDetalle: productoEncontrado, producto: producto });
-            })
+        db.Product.update({
+            img: req.file.filename,
+            name: req.body.name,
+            description: req.body.description,
+            category_id: req.body.category_id,
+            price: req.body.price,
+        },
+        {
+            where: {
+                id: id
+            }
+        })
+        .then(() => {
+            return res.redirect('/products');
+        })
+        .catch(error => {
+            res.send(error);
+        });
     },
-
-
-
-
-
-
-
     carritoProductos: (req, res) => {
         res.render('productCart', {})
     },
-    crearProducto: (req, res) => {
-        res.render('creacion-de-productos', { listaDeProductos: productos })
-    },
-    // store: (req, res) => {
-    //     let imagen = req.file.filename;
-
-    //     let nuevoProducto = {
-    //         id: productos[productos.length - 1].id + 1,
-    //         img: imagen,
-    //         ...req.body
-    //     };
-
-    //     productos.push(nuevoProducto);
-    //     fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 4));
-
-    //     res.redirect('/products');
-    // },
-
-    /*anterior
-        editarProducto: (req, res) => {
-            res.render('edicion-de-productos', {listaDeProductos: productos})
-        },*/
-    //4
-
-    editar: (req, res) => {
-        let categoria = db.Category.findAll();
-        let usuario = db.User.findAll();
-        let productoEnDetalle = db.Product.findByPk(req.params.id);
-        Promise.all([categoria, usuario, productoEnDetalle])
-            .then(([categorias, formatos, usuarios, productoEncontrado]) => {
-                res.render('edicion-de-productos', { listaDeProductos: productos });
-            })
-    },
-
-
-    /*Anterior
-    update: (req,res) => {
-            let idDelProducto = req.params.productoId;
-            let productoAEditar = productos[idDelProducto];
-    
-            res.render('edicion-de-productos', {productoAEditar: productoAEditar});
-        },*/
-    //5
-    update: (req, res) => {
-        db.Product.update({
-            nombre: req.body.name,
-            descripcion: req.body.descripyion,
-            imagen: req.file.image,
-            FKcategoria: req.body.category,
-
-        }, {
-            where: {
-                id: req.params.id
-            }
-        });
-        res.redirect('/products/' + req.params.id);
-    },
-
-        // 6
     borrar: (req, res) => {
+        let id = req.params.id;
 
-            db.Product.destroy({
-                where: {
-                    id: req.params.id
-                }
-            });
-            res.redirect('/products/');
-        }
+        db.Product.destroy({
+            where: {
+                id: id
+            }
+        })
+        .then(() => {
+            return res.redirect('/products');
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }
 }
 
 

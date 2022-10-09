@@ -14,16 +14,17 @@
                     <div><i style="padding-right: 2px;" class="fas fa-home"></i>Inicio / Mi Cuenta</div>
                 </div>
 
-                <img src="images/usersAvatars/<%= user.userAvatar ? user.userAvatar : 'default_user.jpg'%>" width="20"
-                    style="border-radius: 100;">
-                Hola <%= user.firstName %>
-                    <br>
-
-                    <div class="alert-user" <%= user.email %>>
-
+                <div>
+                    <div style=" display: flex; justify-content: center; padding: 10px;">
+                        <img src="/images/usersAvatars/<%= user.img ? user.img : 'default_user.jpg' %>">
                     </div>
-                    <br>
-                    <br>
+
+                    <div style=" color: white; text-align: center; background-color: darkred; margin: 0px 20%;" >
+                        <h3>Hola <%= user.first_name + " " + user.last_name%></h3>
+                        <h3>Corre: <%= user.email %></h3>
+                    </div>
+                </div>
+                    
 
 
 

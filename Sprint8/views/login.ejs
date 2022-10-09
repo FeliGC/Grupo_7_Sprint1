@@ -30,8 +30,9 @@
                     </div>
 
                     <form method="post" action="/users/login">
-                        <label>Nombre de usuario o correo electronico:</label>
-                        <input type="text" name="email" class="escribir name" required minlength="3" maxlength="30">
+                        <label for="email">Correo electronico:</label>
+                        <input type="text" name="email" class="escribir name" required minlength="3" maxlength="30"
+                        value="<%= locals.oldData ? oldData.email : null %>">
 
                         <% if(locals.errors && errors.email) { %>
                             <div class="errors-form">
@@ -40,9 +41,8 @@
                             <% } %>
                                 <br>
                                 <br>
-                                <label>Contraseña:</label>
-                                <input type="password" name="password" class="escribir password" required minlength="4"
-                                    maxlength="30">
+                                <label for="password">Contraseña:</label>
+                                <input type="password" name="password" class="escribir password" required minlength="8" maxlength="30">
                                 <% if(locals.errors && errors.password) { %>
                                     <div class="errors-form">
                                         <%= errors.password.msg %>
@@ -51,11 +51,8 @@
                                         <br>
                                         <br>
                                         <div class="checkbox-contraseña">
-                                            <input type="checkbox" name="recordarcontraseña" class="check">
-                                            <p style="font-size: 17px;color: rgb(255, 255, 255);">¿Recordar Contraseña?
-                                            </p>
-
-
+                                            <input type="checkbox" name="remember_user" class="check">
+                                            <p style="font-size: 17px;color: rgb(255, 255, 255);">¿Recordar Contraseña?</p>
                                         </div>
 
                                         <div class="div-boton">
@@ -92,15 +89,15 @@
                     </p>
                     <br>
 
-                    <a href="/register"><button>REGISTRARSE</button></a>
+                    <a href="/users/register"><button>REGISTRARSE</button></a>
 
                 </div>
                 <script src="/js/login.js"></script>
             </section>
 
             <%- include('partials/footer.ejs') %>
-
-
+            
+            <script src="/js/login.js"></script>
     </body>
 
 </html>

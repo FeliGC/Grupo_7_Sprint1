@@ -6,15 +6,15 @@
     <main>
             <h1 class="titulares">Lista De Productos</h1>
             
-            <% for(let productos of listaDeProductos) { %>
-                <a href="/products/detail/<%= productos.id %>" class="producto-de-recomendacion">
+            <% for(let products of allProducts) { %>
+                <a href="/products/detail/<%= products.id %>" class="producto-de-recomendacion">
                     <div class="caja-de-imagenes">
-                        <img src="/images/<%= productos.img %>" class="imagenes">
+                        <img src="/images/<%= products.img %>" class="imagenes">
                     </div>
                 <div class="detalle-del-producto-relacionado">
-                    <h2 class="titulares"><%= productos.name %></h2>
+                    <h2 class="titulares"><%= products.name %></h2>
                     <p class="valoraciones">Valoracíon: <i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i><i class="fas fa-star" id="estrellas-de-valoracion"></i></p>
-                    <p class="precio">$ARS <%= productos.price %></p>
+                    <p class="precio">$ARS <%= products.price %></p>
                     <div class="agregar-favorito">
                         <p><i class="fas fa-heart" id="corazon-de-favoritos"></i>Agregar a Favoritos</p>
                     </div>

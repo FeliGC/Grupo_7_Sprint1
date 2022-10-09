@@ -115,8 +115,34 @@ h1.titulares {
     color:crimson
 }
 
+.secciones-de-los-comentarios {
+    color: white;
+}
+
 .boton-de-enviar {
     width: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    transition: 450ms;
+}
+
+.boton-de-editar {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    transition: 450ms;
+}
+
+.boton-de-borrar {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
     background-color: #ffffff;
     color: #000000;
     border: solid 1px #000000;
@@ -187,15 +213,25 @@ input[type="radio"]{
 
 .estrellas-de-valoracion:hover,
 .estrellas-de-valoracion:hover ~ .estrellas-de-valoracion {
-  color: gold;
+    color: gold;
 }
 
 input[type="radio"]:checked ~ .estrellas-de-valoracion {
-  color: gold;
+    color: gold;
 }
 
 .boton-de-enviar:hover {
     background-color: blue;
+    color: white
+}
+
+.boton-de-borrar:hover {
+    background-color: black;
+    color: white
+}
+
+.boton-de-editar:hover {
+    background-color: #630e27;
     color: white
 }
 

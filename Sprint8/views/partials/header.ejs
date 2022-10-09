@@ -15,23 +15,21 @@
 
     <div class="nav">
         <br>
-        <p><a href="">Inicio</a></p>
-        <p><a href="#">Categoria</a></p>
-        <p><a href="#">Contacto</a></p>
-        <p><a href="#">Nosotros</a></p>
+        <p><a href="/">Inicio</a></p>
+        <p><a href="/products">Productos</a></p>
+        <p><a href="/contact">Contacto</a></p>
+        <p><a href="/team">Nosotros</a></p>
         <br>
         <br>
         <br>
         <% if(locals.isLogged) { %>
 
-            <p><a class="nav-link" href="a" id="dropUser" role="buttom" data-bs-toggle-="dropdown"
+            <p><a class="nav-link" href="/users/profile" id="dropUser" role="buttom" data-bs-toggle-="dropdown"
                     aria-expanded="false">
-                    <img src="images/usersAvatars/<%= locals.userLogged.userAvatar %>" width="20"
-                        style="border-radius: 100;">
-                    Hola <%= locals.userLogged.fullName %>
+                    <img src="/images/usersAvatars/<%= locals.userLogged.img ? locals.userLogged.img : 'default_user.jpg' %>" style="border-radius: 8px; width:20px">
+                    Hola <%= locals.userLogged.first_name %>
                 </a>
             </p>
-            <p><a href="/users/profile">Mi perfil</a><i class="dropdown-item"></i> </p>
             <p><a href="/users/logout">Cerrar Sesión</a><i class="dropdown-item"></i> </p>
             <br>
 

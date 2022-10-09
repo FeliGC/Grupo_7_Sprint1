@@ -11,25 +11,25 @@
             <main>
                 <form method="POST" action="/users/register" enctype="multipart/form-data">
                     <div class="forma">
-                        <label for="firstName">Nombre de usuario:</label>
+                        <label for="first_name">Nombre de usuario:</label>
                         <br>
-                        <input type="text" name="firstName" id="firstName" placeholder="Nombre de su persona"
-                            value="<%= locals.oldData ? oldData.firstName : null %>">
-                        <% if(locals.errors && errors.firstName) { %>
+                        <input type="text" name="first_name" id="first_name" placeholder="Nombre de su persona"
+                            value="<%= locals.oldData ? oldData.first_name : null %>">
+                        <% if(locals.errors && errors.first_name) { %>
                             <div class="errors-form" >
-                                <%= errors.firstName.msg %>
+                                <%= errors.first_name.msg %>
                             </div>
                         <% } %>
                         <br>
                         <br>
                         <br>
-                        <label for="lastName">Apellido de usuario:</label>
+                        <label for="last_name">Apellido de usuario:</label>
                         <br>
-                        <input type="text" name="lastName" id="lastName" placeholder="Apellido de su persona"
-                            value="<%= locals.oldData ? oldData.lastName : null %>">
-                        <% if(locals.errors && errors.lastName) { %>
+                        <input type="text" name="last_name" id="last_name" placeholder="Apellido de su persona"
+                            value="<%= locals.oldData ? oldData.last_name : null %>">
+                        <% if(locals.errors && errors.last_name) { %>
                             <div class="errors-form" >
-                                <%= errors.lastName.msg %>
+                                <%= errors.last_name.msg %>
                             </div>
                         <% } %>
                         <br>
@@ -68,13 +68,13 @@
                         <form method="post" action="/users/register">
                             <button type="submit">Enviar</button>
                         </form>
-                        <form>
-                            <button type="reset">Borrar</button>
-                        </form>
+                        <button type="reset">Borrar</button>
                     </div>
                 </form>
             </main>
             <%- include('partials/footer.ejs') %>
+
+            <script src="/js/register.js"></script>
     </body>
 
 </html>
