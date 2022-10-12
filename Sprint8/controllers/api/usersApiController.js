@@ -1,6 +1,6 @@
 const db = require('../../src/database/models');
 const Op = db.Sequelize.Op
-
+const path = require("path")
 module.exports = {
     list: (req,res) => {
         db.User.findAll()
@@ -9,7 +9,15 @@ module.exports = {
                 status: 200,
                 url: "api/users",
                 count: users.length,
-                data: users
+                data: users.map(user => {
+                    return {
+                        id: user.id,
+                        name: user.first_name + " " + user.last_name,
+                        email: user.email,
+                        url: "http://localhost:3000/api/users/" + user.id,
+                        img: path.join(__dirname,"./public/images/usersAvatars" + user.img)
+                    }
+                })
             })
         })
 
@@ -21,7 +29,12 @@ module.exports = {
             return res.json({
                 status: 200,
                 url:`api/users/${req.params.id}`,
-                data: user
+                data: {
+                    id: user.id,
+                    name: user.first_name + " " + user.last_name,
+                    email: user.email,
+                    img: path.join(__dirname, "./public/images/usersAvatars" + user.img)
+                }
             })
         })
 
