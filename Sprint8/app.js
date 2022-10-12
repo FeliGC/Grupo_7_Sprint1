@@ -38,6 +38,6 @@ app.use("/api/products", productsApiRouter)
 app.use("/api/categorys",categorysApiRouter)
 
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3005, () => {
     console.log('Servidor corriendo');
 });

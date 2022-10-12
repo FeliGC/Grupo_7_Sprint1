@@ -65,7 +65,7 @@ h1.titulares {
 }
 
 .precio {
-    color: greenyellow;
+    color: gray;
     font-size: 20px;
     margin: -5px;
     padding: 5px;
@@ -164,7 +164,7 @@ h1.titulares {
 
 footer {
     color: #ffffff;
-    background-color: darkmagenta;
+    background-color:#b22222;
 }
 
 .redes-de-la-pagina {
