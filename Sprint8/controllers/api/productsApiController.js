@@ -34,10 +34,11 @@ module.exports = {
                     name: product.name,
                     description: product.description,
                     price: product.price,
+                    creado: product.created_at,
                     img: path.join(__dirname, "./public/images" + product.img)
+            
                 }
-            })
+            }) 
         })
-
     }
 }

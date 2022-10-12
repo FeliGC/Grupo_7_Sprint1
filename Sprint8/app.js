@@ -30,10 +30,12 @@ app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
 
+const categorysApiRouter = require("./routers/api/categorysApiRouter")
 const productsApiRouter = require("./routers/api/productsApiRouter")
 const usersApiRouter = require('./routers/api/usersApiRouter');
 app.use('/api/users', usersApiRouter);
 app.use("/api/products", productsApiRouter)
+app.use("/api/categorys",categorysApiRouter)
 
 
 app.listen(process.env.PORT || 3000, () => {
