@@ -2,13 +2,33 @@
 <html lang="en">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/EstilosCarro.css">
-<link rel="stylesheet" href="/css/registro.css">
 <link rel="stylesheet" href="/css/style_login.css">
 <%- include('partials/head.ejs') %>
 
-    <body>
-        <%- include('partials/header.ejs') %>
-            <main>
+<body>
+    <%- include('partials/header.ejs') %>
+
+        <section>
+            <div class="section-micuenta">
+                <h1 class="micuenta">MI CUENTA</h1>
+                <div><i style="padding-right: 2px;" class="fas fa-home"></i>Inicio / Mi Cuenta</div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="formu-login">
+
+                <div class="subtitulo">
+
+                    <i class="fas fa-sign-in-alt acceder-icono"></i>
+                    <h2>REGISTRARSE</h2>
+
+                </div>
+
+                <div style="color: red;" class="errores">
+                    <ul></ul>
+                </div>
+
                 <form method="POST" action="/users/register" enctype="multipart/form-data">
                     <div class="forma">
                         <label for="first_name">Nombre de usuario:</label>
@@ -71,10 +91,38 @@
                         <button type="reset">Borrar</button>
                     </div>
                 </form>
-            </main>
-            <%- include('partials/footer.ejs') %>
 
-            <script src="/js/register.js"></script>
-    </body>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </div>
+
+            <div class="texto-derecha">
+
+                <h1>Registrarse</h1>
+                <br>
+
+                <p>Registrarse en este sitio le permite acceder al estado e historial de sus pedidos.
+                    Simplemente complete los campos a continuación y obtendremos una nueva cuenta configurada para
+                    usted en poco tiempo.
+                    Solo le pediremos la información necesaria para que el proceso de compra sea rápido y fácil.
+                </p>
+                <br>
+
+                <a href="/users/register"><button>REGISTRARSE</button></a>
+
+            </div>
+            <script src="/js/login.js"></script>
+        </section>
+
+        <%- include('partials/footer.ejs') %>
+        
+        <script src="/js/register.js"></script>
+</body>
 
 </html>
