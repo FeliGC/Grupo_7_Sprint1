@@ -15,7 +15,7 @@ module.exports = {
                         id: product.id,
                         name: product.name,
                         description: product.description,
-                        url: "http://localhost:3000/api/products/" + product.id
+                        url: "http://localhost:3005/api/products/" + product.id
                     }
                 })
             })

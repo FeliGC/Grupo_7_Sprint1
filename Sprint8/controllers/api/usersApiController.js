@@ -14,7 +14,7 @@ module.exports = {
                         id: user.id,
                         name: user.first_name + " " + user.last_name,
                         email: user.email,
-                        url: "http://localhost:3000/api/users/" + user.id,
+                        url: "http://localhost:3005/api/users/" + user.id,
                         img: path.join(__dirname,"./public/images/usersAvatars" + user.img)
                     }
                 })
