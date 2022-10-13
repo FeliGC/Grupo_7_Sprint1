@@ -4,7 +4,9 @@ const path = require("path")
 
 module.exports = {
     list: (req,res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            include: [{association: "category"}]
+        })
         .then(products => {
             return res.json({
                 status: 200,
@@ -15,6 +17,7 @@ module.exports = {
                         id: product.id,
                         name: product.name,
                         description: product.description,
+                        categoria: product.category.name,
                         url: "http://localhost:3005/api/products/" + product.id
                     }
                 })
@@ -24,7 +27,9 @@ module.exports = {
     },
 
     detail:(req,res) => {
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id, {
+            include: [{association: "category"}]
+        })
         .then(product => {
             return res.json({
                 status: 200,
@@ -33,6 +38,7 @@ module.exports = {
                     id: product.id,
                     name: product.name,
                     description: product.description,
+                    categoria: product.category.name,
                     price: product.price,
                     creado: product.created_at,
                     img: path.join(__dirname, "./public/images" + product.img)
