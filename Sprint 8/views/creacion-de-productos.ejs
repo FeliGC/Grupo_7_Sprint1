@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/css/Estilo.css">
+    <link rel="stylesheet" href="/css/crecion-y-edicion">
+    <link rel="stylesheet" href="/estilos_articulo.css">
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <h2 class="titulo-de-cracion">Creación de Productos</h2>
+    <form action="/products/create-products" method="POST" enctype="multipart/form-data"
+    >
+        <div class="creacion-de-productos">
+            <label for="name" class="seccion-de-creacion">Nombre:</label>
+            <input type="text" name="name" id="name" class="input-de-creacion" required>
+            <label for="description" class="seccion-de-creacion">Descripción:</label>
+            <input type="text" name="description" id="description" class="input-de-creacion" required>
+            <label for="image" class="seccion-de-creacion">Imagen del Producto:</label>
+            <input type="file" name="productImage" id="productImage" class="seccion-de-creacion" required>
+            <label for="category" class="titulo-de-categoria">Categoria:</label>
+            <p class="seccion-de-creacion" >
+                <select name="category_id" id="" required>
+                    <option value="" disabled selected> seleccione una categoria </option>
+                    <% allCategorys.forEach(category => { %>
+                    <option value="<%= category.id %>"> <%= category.name %> </option>
+                    <% }); %>
+                </select>
+            </p>
+            <label for="price" class="seccion-de-creacion">Precio:</label>
+            <input type="number" name="price" id="price" class="input-de-creacion" required>
+            <button type="submit" class="boton-de-creacion">Crear</button>
+        </div>
+    </form>
+
+    <%- include('partials/footer.ejs') %>
+
+    <script src="/js/creacion-producto.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/EstilosCarro.css">
+<link rel="stylesheet" href="/css/registro.css">
+<link rel="stylesheet" href="/css/style_login.css">
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <%- include('partials/header.ejs') %>
+            <main>
+                <form method="POST" action="/users/register" enctype="multipart/form-data">
+                    <div class="forma">
+                        <label for="first_name">Nombre de usuario:</label>
+                        <br>
+                        <br>
+                
+                        <input type="text" name="first_name" id="first_name" placeholder="  Nombre"
+                            value="<%= locals.oldData ? oldData.first_name : null %>">
+                        <% if(locals.errors && errors.first_name) { %>
+                            <div class="errors-form" >
+                                <br>
+                                <%= errors.first_name.msg %>
+                            </div>
+                        <% } %>
+                        <br>
+                        <br>
+            
+                        <label for="last_name">Apellido de usuario:</label>
+                        <br>
+                        <br>
+                        <input type="text" name="last_name" id="last_name" placeholder="  Apellido"
+                            value="<%= locals.oldData ? oldData.last_name : null %>">
+                        <% if(locals.errors && errors.last_name) { %>
+                            <div class="errors-form" >
+                                <br>
+                                <%= errors.last_name.msg %>
+                            </div>
+                        <% } %>
+                        <br>
+                        <br>
+                        
+                        <label for="email">Email del usuario:</label>
+                        <br>
+                        <br>
+                        <input type="text" name="email" id="email" placeholder=" Email"
+                            value="<%= locals.oldData ? oldData.email : null %>">
+                        <% if(locals.errors && errors.email) { %>
+                            <div class="errors-form" >
+                                <br>
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                        <br>
+                        <br>
+                        <br>
+                        <label for="password">Creá una contraseña</label>
+                        <br>
+                        <br>
+                        <input type="password" name="password" id="password" placeholder=" ******">
+                        <% if(locals.errors && errors.password) { %>
+                            <div class="errors-form" >
+                                <br>
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
+                        <br>
+                        <br>
+                        <br>
+                        <label for="userAvatar">Agregá una foto de usuario:</label>
+                        <br>
+                        <br>
+                        <input type="file" name="userAvatar" multiple id="userAvatar">
+                        <br>
+                        <br>
+                        <br>
+
+                        <form method="post" action="/users/register">
+                            <button type="submit">Enviar</button>
+                        </form>
+                        <button type="reset">Borrar</button>
+                    </div>
+                </form>
+            </main>
+            <%- include('partials/footer.ejs') %>
+
+            <script src="/js/register.js"></script>
+    </body>
+
+</html>

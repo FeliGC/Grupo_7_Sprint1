@@ -1,0 +1,48 @@
+<header>
+    <div class="main-header-top-bar">
+
+        <img class="logo" src="/images/Logo_Vinoteca.png" alt="logo">
+        <div class="titular">El vino no solucionará tus problemas... pero bueno, ¡el agua tampoco!</div>
+        <div class="navbar">
+            <input type="search" id="Buscar" placeholder="  Encuentra tu bebida favorita">
+            <label class="searchbtn "> <i class="fas fa-search fa-2x"></i> 
+            </label>
+            
+        </div> 
+
+        
+
+    </div>
+
+    <div class="nav">
+        <br>
+        <p><a href="/">Inicio</a></p>
+        <p><a href="/products">Productos</a></p>
+        <p><a href="/contact">Contacto</a></p>
+        <p><a href="/team">Nosotros</a></p>
+        <br>
+        <br>
+        <br>
+        <% if(locals.isLogged) { %>
+
+            <p><a class="nav-link" href="/users/profile" id="dropUser" role="buttom" data-bs-toggle-="dropdown"
+                    aria-expanded="false">
+                    <img src="/images/usersAvatars/<%= locals.userLogged.img ? locals.userLogged.img : 'default_user.jpg' %>" style="border-radius: 1px; width:50px">
+                    Hola <%= locals.userLogged.first_name %>
+                </a>
+            </p>
+            <p><a href="/users/logout">Cerrar Sesión</a><i class="dropdown-item"></i> </p>
+            <br>
+
+            <% } else { %>
+                <p><a href="/users/register">Registrate  </a><i class="fas fa-user-circle"></i> </p>
+                <p><a href="/users/login">Inicia sesión  </a><i class="fas fa-sign-in-alt"></i> </p>
+                <p><a href="/products/carrito">Mi carrito  </a><i class="fas fa-shopping-bag"></i> </p>
+                <br>
+                <% } %>
+    </div>
+    <div class="burger-menu">
+        <i class="fas fa-bars" id="burguer"></i>
+
+    </div>
+</header>

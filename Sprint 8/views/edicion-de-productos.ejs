@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/css/Estilo.css">
+<link rel="stylesheet" href="/css/crecion-y-edicion">
+<link rel="stylesheet" href="/estilos_articulo.css">
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/header.ejs') %>
+
+
+    <h2 class="titulo-de-cracion">Edición de Productos</h2>
+    <form action="/products/edit-products/<%= Product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="creacion-de-productos">
+            <label for="name" class="seccion-de-creacion">Nombre:</label>
+            <input type="text" name="name" id="name" value="<%= Product.name %>" class="input-de-creacion">
+            <label for="description" class="seccion-de-creacion">Descripción:</label>
+            <input type="text" name="description" id="description" value="<%= Product.description %>" class="input-de-creacion">
+            <label for="image" class="seccion-de-creacion">Imagen del Producto:</label>
+            <input type="file" name="productImage" id="productImage" src="<%= Product.img %>" class="seccion-de-creacion">
+            <label for="category" class="titulo-de-categoria">Categoria:</label>
+            <p class="seccion-de-creacion" >
+                <select name="category_id" id="" required>
+                    <% allCategorys.forEach(category => { %>
+                    <option value="<%= category.id %>"
+                        <% Product.category.id == category.id ? "selected" : ''; %>
+                    > 
+                        <%= category.name %>
+                    </option>
+
+                    <% }); %>
+                </select>
+            </p>
+            <label for="price" class="seccion-de-creacion">Precio:</label>
+            <input type="number" name="price" id="price" value="<%= Product.price %>" class="input-de-creacion">
+            <button type="submit" class="boton-de-creacion">Editar</button>
+        </div>
+    </form>
+
+    <%- include('partials/footer.ejs') %>
+
+    <script src="/js/Edit-producto.js"></script>
+</body>
+</html>
