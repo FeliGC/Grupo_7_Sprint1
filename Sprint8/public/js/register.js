@@ -6,14 +6,14 @@ window.addEventListener("load", function () {
 
         let errores = [];
 
-        let nombre = document.querySelector('input.firstName')
+        let nombre = document.querySelector('input.first_name')
         if (nombre.value == "") {
             errores.push("El campo de nombre tiene que estar completo")
         } else if (nombre.value.length < 4) {
             errores.push("El campo de nombre debe tener al menos 4 caracteres")
         };
 
-        let apellido = document.querySelector('input.lastName')
+        let apellido = document.querySelector('input.last_name')
         if (apellido.value == "") {
             errores.push("El campo de apellido tiene que estar completo")
         } else if (apellido.value.length < 3) {
@@ -51,15 +51,7 @@ window.addEventListener("load", function () {
             }
         }
 
-        if (errores.length > 0) {
-            e.preventDefault()
-
-            let ulErrores = document.querySelector("div.errores ul")
-
-            for (let i = 0; i < errores.length; i++) {
-                ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-            }
-        }
+        console.log(errores);
     })
 
 

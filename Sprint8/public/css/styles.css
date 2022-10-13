@@ -4,14 +4,9 @@
 a{
     color:black;
     text-decoration-line: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    
-    font-family: "Lato", Sans-serif;
 }
 body{
-    background-image: url(https://destileriamoretti.com/wp-content/uploads/2021/02/dark_wall.png);
-    
+    background-image: url(https://s1.1zoom.me/big0/607/Wine_Black_background_Bottle_Stemware_512316_1280x923.jpg);
 
 
 /* Header*/
@@ -19,15 +14,14 @@ body{
 }
 header{
     font-family: 'roboto';
-    font-weight: 800 px;
-    font-weight: bold;
-    background-color: coral;
+    font-weight: 600;
+    font-size: smaller;
+    background-color:#b22222;
     padding-top: 15px;
 }
 .titular{
     font-weight: 450;
-    font-size: 18px;
-    font-style: italic;
+    font-size: medium;
 }
 .nav{
    padding: 0.5%;
@@ -86,24 +80,23 @@ position: relative;
     top: -15px;
 }
 .tipografia {
-    padding: 20px;
     font-family: 'roboto';
     font-weight: 500 italic;
     font-size: 24px;
     text-align: center;
-    color: #FFF;
+    color: #ebebeb;
 }
 .precio{
     font-family: 'roboto';
     font-weight: 500;
     font-size: 20px;
-    padding-left: 5px;
+    padding-right:20px;
 }
 .des{
     font-family: 'roboto';
     font-weight: 400;
     font-size: 16px;
-    color:red;
+    color:#b22222;
     padding-top: 5px;
 }
 .desc{
@@ -119,7 +112,7 @@ position: relative;
 /* Footer */
 
 footer{
-    background-color: coral;
+    background-color: whitesmoke;
     font-family: 'roboto';
     font-weight: 300;
     font-size: 16px;
@@ -151,8 +144,7 @@ b{
     justify-content: space-around; 
 }
 .logo{
-    width: 14%;
-    padding: 18px;
+    width: 10%;
 }
 .seccion{
     display: flex;
@@ -184,7 +176,7 @@ flex-wrap: wrap;
 width: 30%;
 }
 .imgfoot:hover{
-    color: white;
+    color: #b22222;
 }
 
 }

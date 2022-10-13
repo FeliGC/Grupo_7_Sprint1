@@ -7,7 +7,6 @@ const registerValidation = require('../middlewares/users/registerValidation');
 const guestMiddleware = require('../middlewares/users/guestMiddleware');
 const authMiddleware = require('../middlewares/users/authMiddleware');
 
-
 /* Register */
 router.get('/register', guestMiddleware, usersController.register);
 /* Procesar el registro */

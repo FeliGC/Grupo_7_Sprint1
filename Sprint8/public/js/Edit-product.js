@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
             descripcion.style.border = '4px #c51244 solid'
         }
 
-        let imagen = document.querySelector('input.image');
+        let imagen = document.querySelector('input.productImage');
         let extensionesValidas = ".png, .gif, .jpeg, .jpg";
 
         if (imagen == "") {

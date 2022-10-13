@@ -25,24 +25,25 @@
 
                     </div>
 
-                    <div style="color: red;" class="errores">
+                    <div style="color: red; list-style: none;" class="errores">
                         <ul></ul>
                     </div>
 
                     <form method="post" action="/users/login">
                         <label for="email">Correo electronico:</label>
-                        <input type="text" name="email" class="escribir name" required minlength="3" maxlength="30"
+                        <input type="text" name="email" class="escribir name"
                         value="<%= locals.oldData ? oldData.email : null %>">
 
                         <% if(locals.errors && errors.email) { %>
                             <div class="errors-form">
                                 <%= errors.email.msg %>
                             </div>
-                            <% } %>
+                        <% } %>
+
                                 <br>
                                 <br>
                                 <label for="password">Contraseña:</label>
-                                <input type="password" name="password" class="escribir password" required minlength="8" maxlength="30">
+                                <input type="password" name="password" class="escribir password">
                                 <% if(locals.errors && errors.password) { %>
                                     <div class="errors-form">
                                         <%= errors.password.msg %>
@@ -92,12 +93,10 @@
                     <a href="/users/register"><button>REGISTRARSE</button></a>
 
                 </div>
-                <script src="/js/login.js"></script>
+                <!-- <script src="/js/login.js"></script> -->
             </section>
 
             <%- include('partials/footer.ejs') %>
-            
-            <script src="/js/login.js"></script>
     </body>
 
 </html>

@@ -7,14 +7,7 @@ const usersController = {
         res.render('register')
     },
     processRegister: (req, res) => {
-        const validation = validationResult(req);
-
-        if (!validation.isEmpty()) {
-            return res.render('register', {
-                errors: validation.mapped(),
-                oldData: req.body
-            });
-        }
+        const errors = validationResult(req);
 
         db.User.findOne({
             where: {
@@ -31,20 +24,24 @@ const usersController = {
                     },
                     oldData: req.body
                 });
+            } else if (!errors.isEmpty() || req.file === undefined) {
+                return res.render('register', {
+                    errors: errors.mapped(),
+                    oldData: req.body
+                });
+            } else {
+                db.User.create({
+                    first_name: req.body.first_name,
+                    last_name: req.body.last_name,
+                    email: req.body.email,
+                    password: bcryptjs.hashSync(req.body.password, 10),
+                    img: req.file.filename
+                })
+                .then(() => {
+                    return res.redirect('/users/login');
+                })
             }
         })
-        .catch(error => {
-            console.log(error);
-        });
-
-        db.User.create({
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            img: req.file.filename
-        })
-        
-
-        return res.redirect('/users/login');
     },
     login: (req, res) => {
         return res.render('login');
@@ -61,32 +58,34 @@ const usersController = {
 
                 if (isOkThePassword) {
                     req.session.userLogged = email;
+                    let userInLogin = req.session.userLogged;
 
                     if (req.body.remember_user) {
-                        res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60 })
+                        res.cookie("userEmail", userInLogin.email, { maxAge: (1000 * 60) * 60 })
                     }
 
                     return res.redirect("/users/profile");
+                } else {
+                    return res.render('login', {
+                        errors: {
+                            password: {
+                                msg: 'La contraseña no coincide'
+                            },
+                            oldData: req.body
+                        }
+                    });
                 }
+            } else {
                 return res.render('login', {
                     errors: {
-                        password: {
-                            msg: 'La contraseña no coincide'
+                        email: {
+                            msg: 'No se encuentra éste email en la base'
                         },
                         oldData: req.body
                     }
-                });
+                })
             }
-            return res.render('login', {
-                errors: {
-                    email: {
-                        msg: 'No se encuentra éste email en la base'
-                    },
-                    oldData: req.body
-                }
-            });
         })
-        
     },
     profile: (req, res) => {
         console.log(req.cookies.userEmail);
