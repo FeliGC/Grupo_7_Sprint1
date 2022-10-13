@@ -65,10 +65,14 @@ h1.titulares {
 }
 
 .precio {
+<<<<<<< HEAD
     color: gray;
+=======
+    color: rgb(117, 182, 19);
+>>>>>>> 5d33b43da8c27e6eac31e62fe16dc0cfeb8c617b
     font-size: 20px;
-    margin: -5px;
-    padding: 5px;
+    padding: 2px;
+    padding-right: 10px;
 }
 
 .seccion-de-comentarios {
@@ -88,7 +92,7 @@ h1.titulares {
     padding: 5px 10px 10px 10px;
     margin: -5px;
     transition: 450ms;
-    color: gray;
+    color: rgb(202, 202, 202);
 }
 
 .titulo-valoracion {
@@ -163,8 +167,13 @@ h1.titulares {
 /* FOOTER---------------------------------------------------------------- */
 
 footer {
+<<<<<<< HEAD
     color: #ffffff;
     background-color:#b22222;
+=======
+    color: #070707;
+    background-color: coral;
+>>>>>>> 5d33b43da8c27e6eac31e62fe16dc0cfeb8c617b
 }
 
 .redes-de-la-pagina {

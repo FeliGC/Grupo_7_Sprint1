@@ -8,6 +8,8 @@ module.exports = {
             include: [{association: "category"}]
         })
         .then(products => {
+            console.log("prueba msj");
+            console.log(products);
             return res.json({
                 status: 200,
                 url: "api/products",

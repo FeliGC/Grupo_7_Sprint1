@@ -33,52 +33,62 @@
                     <div class="forma">
                         <label for="first_name">Nombre de usuario:</label>
                         <br>
-                        <input type="text" name="first_name" id="first_name" placeholder="Nombre de su persona"
+                        <br>
+                
+                        <input type="text" name="first_name" id="first_name" placeholder="  Nombre"
                             value="<%= locals.oldData ? oldData.first_name : null %>">
                         <% if(locals.errors && errors.first_name) { %>
                             <div class="errors-form" >
+                                <br>
                                 <%= errors.first_name.msg %>
                             </div>
                         <% } %>
                         <br>
                         <br>
-                        <br>
+            
                         <label for="last_name">Apellido de usuario:</label>
                         <br>
-                        <input type="text" name="last_name" id="last_name" placeholder="Apellido de su persona"
+                        <br>
+                        <input type="text" name="last_name" id="last_name" placeholder="  Apellido"
                             value="<%= locals.oldData ? oldData.last_name : null %>">
                         <% if(locals.errors && errors.last_name) { %>
                             <div class="errors-form" >
+                                <br>
                                 <%= errors.last_name.msg %>
                             </div>
                         <% } %>
                         <br>
                         <br>
-                        <br>
+                        
                         <label for="email">Email del usuario:</label>
                         <br>
-                        <input type="text" name="email" id="email" placeholder="hola123@email.com"
+                        <br>
+                        <input type="text" name="email" id="email" placeholder=" Email"
                             value="<%= locals.oldData ? oldData.email : null %>">
                         <% if(locals.errors && errors.email) { %>
                             <div class="errors-form" >
+                                <br>
                                 <%= errors.email.msg %>
                             </div>
                         <% } %>
                         <br>
                         <br>
                         <br>
-                        <label for="password">Crea una contraseña</label>
+                        <label for="password">Creá una contraseña</label>
                         <br>
-                        <input type="password" name="password" id="password">
+                        <br>
+                        <input type="password" name="password" id="password" placeholder=" ******">
                         <% if(locals.errors && errors.password) { %>
                             <div class="errors-form" >
+                                <br>
                                 <%= errors.password.msg %>
                             </div>
                         <% } %>
                         <br>
                         <br>
                         <br>
-                        <label for="userAvatar">Agrega una foto de usuario:</label>
+                        <label for="userAvatar">Agregá una foto de usuario:</label>
+                        <br>
                         <br>
                         <input type="file" name="userAvatar" multiple id="userAvatar">
                         <br>

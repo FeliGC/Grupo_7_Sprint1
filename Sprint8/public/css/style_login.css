@@ -6,31 +6,35 @@
 }
 
 body{
-    background-image: url(https://s1.1zoom.me/big0/607/Wine_Black_background_Bottle_Stemware_512316_1280x923.jpg);
-    font-family:"Source Sans Pro" ;
+    background-image: url(https://destileriamoretti.com/wp-content/uploads/2021/02/dark_wall.png);
+    font-family:"Roboto" ;
+    
     
 }
 
 .section-micuenta{
-    background-color: aliceblue;
+    color: white;
     padding-bottom: 5px;
     min-width: 249px;
+    background-image: url(https://destileriamoretti.com/wp-content/uploads/2021/02/dark_wall.png);
+    font-family:"Roboto" ;
     
 }
 
 
 .section-micuenta div{
     
-    color: black;
+    color: white;
     text-align: center;
 }
 
 .micuenta{
     
     padding: 5px;
-    color: rgb(0, 0, 0);
+    color: white;
     border-radius: 1px;
     font-style: italic;
+    font-family:"Roboto" ;
     
     
 }
@@ -46,6 +50,7 @@ body{
 .subtitulo{
     display: flex;
     padding-bottom: 10px;
+    font-family:"Roboto" ;
     
 }
 
@@ -53,7 +58,7 @@ body{
     text-decoration: underline;
     color: white;
     font-size: 30px;
-    font-style: italic;
+    font-family:"Roboto" ;
 }
 
 .formu-login{
@@ -77,7 +82,7 @@ body{
     border: solid 2px white;
     border-radius: 2px;
     width: 80%;
-    background-color: white;
+    background-image: url(https://destileriamoretti.com/wp-content/uploads/2021/02/dark_wall.png);
 }
 
 
@@ -113,16 +118,20 @@ body{
     font-size: 17px;
     width: 40%;
     min-width: 100px;
+    font-family:"Roboto" ;
     
 }
 
 
 .recuperar-contra{
     padding-top: 20px;
+    font-family:"Roboto" ;
+    font-style: italic;
 }
 
 .errors-form {
-    color: yellow;
+    color: coral;
+    
 }
 
 a button{
@@ -143,9 +152,10 @@ h1{
 }
 .texto-derecha{
     display: inline-block;
-    background-color: white;
+    background-image: url(https://destileriamoretti.com/wp-content/uploads/2021/02/dark_wall.png);
     text-align: center;
     padding: 17px 40px;
+    font-family:"Roboto" ;
 }
 
 @media (min-width:480px){

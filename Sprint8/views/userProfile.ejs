@@ -10,8 +10,8 @@
 
             <section>
                 <div class="section-micuenta">
-                    <h1 class="micuenta">MI CUENTA</h1>
-                    <div><i style="padding-right: 2px;" class="fas fa-home"></i>Inicio / Mi Cuenta</div>
+                    <h1 class="micuenta"> MI CUENTA</h1>
+                    <div><i style="padding-right: 2px; color: rgb(255, 255, 255);" class="fas fa-home"></i> Inicio / Mi Cuenta</div>
                 </div>
 
                 <div>
@@ -19,9 +19,9 @@
                         <img src="/images/usersAvatars/<%= user.img ? user.img : 'default_user.jpg' %>">
                     </div>
 
-                    <div style=" color: white; text-align: center; background-color: darkred; margin: 0px 20%;" >
+                    <div style=" color: white; text-align: center; background-color: coral; margin: 0px 20%; padding: 15px;" >
                         <h3>Hola <%= user.first_name + " " + user.last_name%></h3>
-                        <h3>Corre: <%= user.email %></h3>
+                        <h3>Correo: <%= user.email %></h3>
                     </div>
                 </div>
                     
