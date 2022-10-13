@@ -3,7 +3,7 @@ main{
     justify-content: center;
     text-align: justify;
     border-radius: 16px black;
-    background-image: url(https://s1.1zoom.me/big0/607/Wine_Black_background_Bottle_Stemware_512316_1280x923.jpg);
+    background-image: url(https://destileriamoretti.com/wp-content/uploads/2021/02/dark_wall.png);
     width: 100%;
     height: 100%;
 }
@@ -16,7 +16,7 @@ font-family: 'roboto';
 font-weight: 400;
 font-size: 16px;
 margin: 40px;
-background-color: #b22222;
+background-image: url(https://destileriamoretti.com/wp-content/uploads/2021/02/dark_wall.png);
 }
 
 input{
