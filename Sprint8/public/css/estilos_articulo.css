@@ -28,7 +28,7 @@ main{
 
 .titulares {
     font-size: 30px;
-    text-decoration: underline;
+    -webkit-text-stroke: 1px black;
     color: #ffffff;
 }
 
@@ -79,9 +79,11 @@ h1.titulares {
 }
 
 .boton-de-carro {
-    width: 50%;
+    width: 30%;
     transition: 450ms;
     border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .agregar-favorito {
@@ -164,7 +166,7 @@ h1.titulares {
 
 footer {
     color: #ffffff;
-    background-color: darkmagenta;
+    background-color: 	#4B4B4B;
 }
 
 .redes-de-la-pagina {
@@ -192,6 +194,7 @@ footer {
 .boton-de-carro:hover {
     background-color: #000000;
     color: #ffffff;
+ 
 }
 
 .mas:hover,

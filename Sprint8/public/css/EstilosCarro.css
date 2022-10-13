@@ -197,9 +197,6 @@ border-radius: 0px 0px 0px 0px;
 padding: 20px 30px 20px 30px;
 width: 54.5%;
 
-
-
-
 }
 
 .cuponbutton{
@@ -212,6 +209,7 @@ width: 54.5%;
     background-color: #000000;
     padding: 15px 40px 15px 40px;
     min-width: 230px;
+
 }
 
 .checkout{

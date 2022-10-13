@@ -63,7 +63,8 @@ border-top:solid 1px #ebebeb;
 padding-left: 25px;
 display: flex;
 position: relative;
-
+padding-bottom: 15px;
+padding-top: 10px;
 }
 .car{
     display: block;
@@ -84,13 +85,15 @@ position: relative;
     font-weight: 500 italic;
     font-size: 24px;
     text-align: center;
-    color: #ebebeb;
+    color: #FFF;
+    padding-bottom: 15px;
+    -webkit-text-stroke: 1px black;
 }
 .precio{
     font-family: 'roboto';
     font-weight: 500;
     font-size: 20px;
-    padding-right:20px;
+    padding-right: 20px; 
 }
 .des{
     font-family: 'roboto';
@@ -98,14 +101,16 @@ position: relative;
     font-size: 16px;
     color:#b22222;
     padding-top: 5px;
+    padding-left: 30px;
 }
 .desc{
     display: none;
     font-family: 'roboto';
     font-weight: 400;
     font-size: 16px; 
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     padding-left: 25px;
+    padding-top: 5px;
     color: gray;
 }
 
@@ -126,7 +131,7 @@ b{
     color: black;
 }
 .vino{
-   padding-left: 500px;
+    padding-left: 37%;
 }
 /* Media para Tablet | Escritorio*/
 

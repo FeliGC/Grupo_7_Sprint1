@@ -50,7 +50,7 @@ body{
 }
 
 .subtitulo h2{
-    text-decoration: underline;
+    -webkit-text-stroke: 0.5px black;
     color: white;
     font-size: 30px;
     font-style: italic;
@@ -75,7 +75,7 @@ body{
 .formu-login input{
     padding: 5px;
     border: solid 2px white;
-    border-radius: 2px;
+    border-radius: 5px;
     width: 80%;
     background-color: white;
 }
@@ -108,11 +108,12 @@ body{
     padding: 8px;
     color: white;
     border: solid 1px wheat;
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: rgb(0, 0, 0);
     font-size: 17px;
     width: 40%;
     min-width: 100px;
+   
     
 }
 
@@ -129,8 +130,9 @@ a button{
     color: white;
     padding: 10px;
     background-color: black;
-    border: 1px solid wheat;
+    border: solid 2px wheat;
     width: 65%;
+    border-radius: 10px;
     
 }
 
