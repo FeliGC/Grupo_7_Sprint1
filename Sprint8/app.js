@@ -36,6 +36,6 @@ app.use('/api/users', usersApiRouter);
 app.use("/api/products", productsApiRouter)
 
 
-app.listen(3005, () => {
+app.listen(3001, () => {
     console.log('Servidor corriendo');
 });
